@@ -1,0 +1,128 @@
+[
+    {
+        "class_name": "Customer",
+        "methods": [
+            {
+                "method_name": "getId",
+                "parameters": [],
+                "docstring": []
+            },
+            {
+                "method_name": "setId",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": []
+            },
+            {
+                "method_name": "getName",
+                "parameters": [],
+                "docstring": []
+            },
+            {
+                "method_name": "setName",
+                "parameters": [
+                    "name"
+                ],
+                "docstring": []
+            },
+            {
+                "method_name": "getEmail",
+                "parameters": [],
+                "docstring": []
+            },
+            {
+                "method_name": "setEmail",
+                "parameters": [
+                    "email"
+                ],
+                "docstring": []
+            },
+            {
+                "method_name": "toString",
+                "parameters": [],
+                "docstring": []
+            }
+        ],
+        "attributes": [
+            "id",
+            "name",
+            "email"
+        ],
+        "docstring": []
+    },
+    {
+        "class_name": "CustomerRepository",
+        "methods": [
+            {
+                "method_name": "save",
+                "parameters": [
+                    "customer"
+                ],
+                "docstring": []
+            },
+            {
+                "method_name": "findById",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": []
+            },
+            {
+                "method_name": "deleteById",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": []
+            }
+        ],
+        "attributes": [
+            "customerMap"
+        ],
+        "docstring": []
+    },
+    {
+        "class_name": "CustomerService",
+        "methods": [
+            {
+                "method_name": "getCustomerById",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": []
+            },
+            {
+                "method_name": "addCustomer",
+                "parameters": [
+                    "customer"
+                ],
+                "docstring": []
+            },
+            {
+                "method_name": "deleteCustomer",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": []
+            }
+        ],
+        "attributes": [
+            "repository"
+        ],
+        "docstring": []
+    },
+    {
+        "class_name": "Main",
+        "methods": [
+            {
+                "method_name": "main",
+                "parameters": [
+                    "args"
+                ],
+                "docstring": []
+            }
+        ],
+        "attributes": [],
+        "docstring": []
+    }
+]
