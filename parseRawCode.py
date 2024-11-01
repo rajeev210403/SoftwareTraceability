@@ -95,7 +95,7 @@ def save_to_json(data, json_file):
         json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
-    src_directory = "./datasets/eANCI"  # Path to the directory containing Java files
+    src_directory = "./datasets/iTrust"  # Path to the directory containing Java files
     json_file_path = "parsed_info.json"  # Path to save the JSON file
 
     parsed_info = parse_directory(src_directory)

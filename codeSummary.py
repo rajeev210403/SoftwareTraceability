@@ -123,7 +123,7 @@ def save_summaries_to_file(summaries, output_file):
         json.dump(summaries, f, indent=4)
 
 if __name__ == "__main__":
-    src_directory = "./datasets/eANCI"  # Path to your directory containing Java files
+    src_directory = "./datasets/iTrust"  # Path to your directory containing Java files
     output_file = "code_summaries.json"  # Output file for the generated summaries
 
     # Generate code summaries
