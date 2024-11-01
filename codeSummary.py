@@ -8,8 +8,23 @@ API_KEY = "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"
 
 def parse_java_file(file_path):
     """Parse a Java file and extract the class code."""
-    with open(file_path, 'r', encoding='utf-8') as file:
-        code = file.read()
+    encodings = ['utf-8', 'ISO-8859-1', 'windows-1252']
+    
+    for encoding in encodings:
+        try:
+            with open(file_path, 'r', encoding=encoding) as file:
+                code = file.read()
+            break  # Exit the loop if successful
+        except UnicodeDecodeError:
+            print(f"Could not read file {file_path} with encoding {encoding}. Trying next encoding.")
+            code = None
+        except Exception as e:
+            print(f"An unexpected error occurred while reading {file_path}: {e}")
+            code = None
+
+    if code is None:
+        print(f"Skipping file {file_path} due to encoding issues.")
+        return None
 
     # Parse the Java code using javalang
     try:
@@ -68,16 +83,11 @@ def generate_code_summary_with_groq(class_info, api_key):
     # Call the Groq API to generate the summary
     completion = client.chat.completions.create(
         model="llama3-8b-8192",
-        messages=[
-            {
-                "role": "system",
-                "content": prompt
-            }
-        ],
+        messages=[{"role": "system", "content": prompt}],
         temperature=1,
         max_tokens=1024,
         top_p=1,
-        stream=False,  # Handle as a single response here
+        stream=False,
         stop=None
     )
 
@@ -113,7 +123,7 @@ def save_summaries_to_file(summaries, output_file):
         json.dump(summaries, f, indent=4)
 
 if __name__ == "__main__":
-    src_directory = "./src"  # Path to your directory containing Java files
+    src_directory = "./datasets/eANCI"  # Path to your directory containing Java files
     output_file = "code_summaries.json"  # Output file for the generated summaries
 
     # Generate code summaries

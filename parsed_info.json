@@ -1,128 +1,2265 @@
 [
     {
-        "class_name": "Customer",
+        "class_name": "AccessManager",
         "methods": [
             {
-                "method_name": "getId",
-                "parameters": [],
-                "docstring": []
-            },
-            {
-                "method_name": "setId",
+                "method_name": "controllaAccesso",
                 "parameters": [
-                    "id"
+                    "login",
+                    "password"
                 ],
-                "docstring": []
+                "docstring": "Costruttore di default della classe AccessManager"
             },
             {
-                "method_name": "getName",
-                "parameters": [],
-                "docstring": []
-            },
-            {
-                "method_name": "setName",
+                "method_name": "controllaLogin",
                 "parameters": [
-                    "name"
+                    "login"
                 ],
-                "docstring": []
+                "docstring": "Metodo che permette di controllare la correttezza della login e della  \t  password di un accesso invocando il relativo metodo della classe db \t  @param login Stringa che viene usata come login \t  @param password Stringa che viene usata come password \t  @return True se l'accesso \u00e8 presente, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getAccesso",
+                "parameters": [
+                    "login"
+                ],
+                "docstring": "Metodo che permette di controllare l'esistenza della login  \t  invocando il relativo metodo della classe db \t  @param login Stringa che viene usata come login \t  @return True se la login \u00e8 presente, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaAccesso",
+                "parameters": [
+                    "login",
+                    "newAccesso"
+                ],
+                "docstring": "Metodo che restituisce un accesso invocando il relativo metodo della classe db \t  @param login Stringa che viene usata come login \t  @return Restituisce un oggetto di tipo Accesso \t  @throws DbException"
+            },
+            {
+                "method_name": "inserisciAccesso",
+                "parameters": [
+                    "ac"
+                ],
+                "docstring": "Metodo che inserisce un accesso all'interno del db  \t  invocando il relativo metodo della classe db \t  @param ac Oggetto di tipo Accesso \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "eliminaAccesso",
+                "parameters": [
+                    "login"
+                ],
+                "docstring": "Metodo che elimina un accesso  dal db invocando il relativo metodo della classe db \t  @param login Stringa che viene usata come login \t  @return True se \u00e8 stato effettuato una cancellazione nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getAccessi",
+                "parameters": [],
+                "docstring": "Metodo che restituisce tutti gli accessi memorizzati  \t  invocando il relativo metodo della classe db \t  @return Restituisce una Collection di Accessi \t  @throws DbException"
+            }
+        ],
+        "attributes": [
+            "dbAccesso"
+        ],
+        "docstring": "La classe AccessManager interagisce con le classi di gestione del database   La classe AccessManager non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "Accesso",
+        "methods": [
+            {
+                "method_name": "getLogin",
+                "parameters": [],
+                "docstring": "Costruttore vuoto della classe Accesso"
+            },
+            {
+                "method_name": "setLogin",
+                "parameters": [
+                    "login"
+                ],
+                "docstring": "Costruttore della classe Accesso \t  @param Login \t  @param Password \t  @param Tipo"
+            },
+            {
+                "method_name": "getPassword",
+                "parameters": [],
+                "docstring": "Metodo che restituisce una login \t  @return Login"
+            },
+            {
+                "method_name": "setPassword",
+                "parameters": [
+                    "password"
+                ],
+                "docstring": "Metodo che imposta una login \t  @param login"
+            },
+            {
+                "method_name": "getTipo",
+                "parameters": [],
+                "docstring": "Metodo che restituisce una password \t  @return Password"
+            },
+            {
+                "method_name": "setTipo",
+                "parameters": [
+                    "tipo"
+                ],
+                "docstring": "Metodo che imposta una password \t  @param password"
+            },
+            {
+                "method_name": "toString",
+                "parameters": [],
+                "docstring": "Metodo che restituisce il tipo di utente che accede \t  @return Tipo"
+            }
+        ],
+        "attributes": [
+            "Login",
+            "Password",
+            "Tipo"
+        ],
+        "docstring": "La classe Accesso permette la gestione degli accessi   La classe Accesso non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "AdminManager",
+        "methods": [
+            {
+                "method_name": "modificaAdmin",
+                "parameters": [
+                    "matricola",
+                    "newAdmin"
+                ],
+                "docstring": "Costruttore di default della classe AdminManager"
+            },
+            {
+                "method_name": "ricercaAdminByMatricola",
+                "parameters": [
+                    "matricola"
+                ],
+                "docstring": "Metodo che modifica un amministratore \t  invocando il relativo metodo della classe db \t  @param matricola la stringa che identifica l'amministratore \t  @param newAdmin Amministratore con i dati aggiornati \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti"
+            },
+            {
+                "method_name": "inserisciAdmin",
+                "parameters": [
+                    "newAdmin"
+                ],
+                "docstring": "Metodo che restituisce un amministratore \t  invocando il relativo metodo della classe db \t  @param matricola stringa che viene utilizzato come matricola dell'amministratore \t  @return Restituisce un oggetto di tipo Amministratore \t  @throws DbException"
+            },
+            {
+                "method_name": "eliminaAmministratore",
+                "parameters": [
+                    "matricola"
+                ],
+                "docstring": "Metodo che inserisce un amministratore all'interno del db \t  invocando il relativo metodo della classe db \t  @param newAdmin Oggetto di tipo Amministratore \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getAmministratoreByLogin",
+                "parameters": [
+                    "login"
+                ],
+                "docstring": "Metodo che elimina un Amministratore  dal db \t  invocando il relativo metodo della classe db \t  @param matricola l'intero che viene utilizzato come matricola \t  @return True se \u00e8 stato effettuato una cancellazione nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getAmministratoreByName",
+                "parameters": [
+                    "nomeAmm",
+                    "cognAmm"
+                ],
+                "docstring": "Metodo che restituisce un amministratore \t  invocando il relativo metodo della classe db \t  @param login stringa che viene utilizzata come login dell'amministratore \t  @return Restituisce un oggetto di tipo amministratore \t  @throws DbException"
+            },
+            {
+                "method_name": "getAmministratori",
+                "parameters": [],
+                "docstring": "Metodo che restituisce un insieme di amministratori \t  invocando il relativo metodo della classe db \t  @param nomeAmm stringa che viene utilizzata come nome dell'amministratore \t  @param cognAmm stringa che viene utilizzata come cognome dell'amministratore \t  @return Restituisce una Collection di Amministratori \t  @throws DbException"
+            }
+        ],
+        "attributes": [
+            "dbAmministratore"
+        ],
+        "docstring": "La classe AdminManager interagisce con le classi di gestione del database   La classe AdminManager non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "Amministratore",
+        "methods": [
+            {
+                "method_name": "getNome",
+                "parameters": [],
+                "docstring": "Costruttore vuoto della classe Amministratore"
+            },
+            {
+                "method_name": "setNome",
+                "parameters": [
+                    "nome"
+                ],
+                "docstring": "Costruttore della classe Amministratore \t  @param Nome \t  @param Cognome \t  @param Matricola \t  @param Email \t  @param Login"
+            },
+            {
+                "method_name": "getCognome",
+                "parameters": [],
+                "docstring": "Metodo che restituisce il nome dell'impiegato \t  @return Nome"
+            },
+            {
+                "method_name": "setCognome",
+                "parameters": [
+                    "cognome"
+                ],
+                "docstring": "Metodo che imposta il nome dell'impiegato \t  @param nome"
+            },
+            {
+                "method_name": "getMatricola",
+                "parameters": [],
+                "docstring": "Metodo che restituisce il cognome dell'impiegato \t  @return Cognome"
+            },
+            {
+                "method_name": "setMatricola",
+                "parameters": [
+                    "matricola"
+                ],
+                "docstring": "Metodo che imposta il cognome dell'impiegato \t  @param cognome"
             },
             {
                 "method_name": "getEmail",
                 "parameters": [],
-                "docstring": []
+                "docstring": "Metodo che restituisce la matricola dell'impiegato \t  @return Matricola"
             },
             {
                 "method_name": "setEmail",
                 "parameters": [
                     "email"
                 ],
-                "docstring": []
+                "docstring": "Metodo che imposta  la matricola dell'impiegato \t  @param matricola"
+            },
+            {
+                "method_name": "getLogin",
+                "parameters": [],
+                "docstring": "Metodo che restituisce l'e-mail dell'impiegato \t  @return Email"
+            },
+            {
+                "method_name": "setLogin",
+                "parameters": [
+                    "login"
+                ],
+                "docstring": "Metodo che imposta l'e-mail dell'impiegato \t  @param email"
             },
             {
                 "method_name": "toString",
                 "parameters": [],
-                "docstring": []
+                "docstring": "Metodo che restituisce la login dell'impiegato \t  @return Login"
             }
         ],
         "attributes": [
-            "id",
-            "name",
-            "email"
+            "Nome",
+            "Cognome",
+            "Matricola",
+            "Email",
+            "Login"
         ],
-        "docstring": []
+        "docstring": "La classe Amministratore permette la gestione degli amministratori   La classe Amministratore non ha dipendenze   @author Federico Cinque"
     },
     {
-        "class_name": "CustomerRepository",
+        "class_name": "CartaIdentita",
         "methods": [
             {
-                "method_name": "save",
-                "parameters": [
-                    "customer"
-                ],
-                "docstring": []
+                "method_name": "id",
+                "parameters": [],
+                "docstring": "rappresenta il codice della carta di identit\u00e0 \t  che viene inserito dall'impiegato"
             },
             {
-                "method_name": "findById",
+                "method_name": "setNumero",
                 "parameters": [
-                    "id"
+                    "code"
                 ],
-                "docstring": []
+                "docstring": "Costruttore di default vuoto"
             },
             {
-                "method_name": "deleteById",
+                "method_name": "getNumero",
+                "parameters": [],
+                "docstring": "oggetto che viene restituito dal database \t  @param cod_carta \t  @param citt \t  @param res \t  @param via \t  @param stciv \t  @param prof \t  @param stat \t  @param cap \t  @param eyes \t  @param sp \t  @param dr \t  @param ds \t  @param validEsp \t  @param num_civ"
+            },
+            {
+                "method_name": "setCittadinanza",
                 "parameters": [
-                    "id"
+                    "citta"
                 ],
-                "docstring": []
+                "docstring": "crea la carta di identit\u00e0 del cittadino che si \u00e8  \t  registrato nel sistema comunale prendendo dalla classe \t  cittadino le informazioni necessarie per la creazione \t  del documento di riconoscimento"
+            },
+            {
+                "method_name": "getCittadinanza",
+                "parameters": [],
+                "docstring": "il codice univoco della carta di identit\u00e0 richiesta dal cittadino, viene  \t\t  inserito dall'impiegato all'atto della creazione cartacea del documento e nel momento \t\t  in cui le informazioni devono essere mantenute nel database."
+            },
+            {
+                "method_name": "getResidenza",
+                "parameters": [],
+                "docstring": "assegno la carta di identit\u00e0 che sto creando al cittadino \t\t  che ne ha fatto richiesta e che \u00e8 presente all'interno del \t\t  database comunale"
+            },
+            {
+                "method_name": "setResidenza",
+                "parameters": [
+                    "res"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "setVia",
+                "parameters": [
+                    "list"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getVia",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "getNumCivico",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setNumCivico",
+                "parameters": [
+                    "n"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "setStatoCivile",
+                "parameters": [
+                    "stat"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getStatoCivile",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setProfessione",
+                "parameters": [
+                    "prof"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getProfessione",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setStatura",
+                "parameters": [
+                    "stat"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getStatura",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setCapelli",
+                "parameters": [
+                    "hair"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getCapelli",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setOcchi",
+                "parameters": [
+                    "eyes"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getOcchi",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "getSegniParticolari",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setSegniParticolari",
+                "parameters": [
+                    "listSp"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "setDataRilascio",
+                "parameters": [
+                    "data"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getDataRilascio",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setDataScadenza",
+                "parameters": [
+                    "datas"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getDataScadenza",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setValiditaEspatrio",
+                "parameters": [
+                    "val"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "isValidaEspatrio",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "toString",
+                "parameters": [],
+                "docstring": null
             }
         ],
         "attributes": [
-            "customerMap"
+            "Numero",
+            "idCittadino",
+            "Cittadinanza",
+            "Residenza",
+            "Via",
+            "StatoCivile",
+            "Professione",
+            "Statura",
+            "Capelli",
+            "Occhi",
+            "SegniParticolari",
+            "DataRilascio",
+            "DataScadenza",
+            "ValidaEspatrio",
+            "num_civico"
         ],
-        "docstring": []
+        "docstring": "\u00e8 un JavaBean che gestisce i metodi di settaggio   e restituzione degli attributi della carta   di identit\u00e0 di un cittadino   @author Francesco"
     },
     {
-        "class_name": "CustomerService",
+        "class_name": "CIManager",
         "methods": [
             {
-                "method_name": "getCustomerById",
+                "method_name": "getCartaByNumero",
+                "parameters": [
+                    "cod"
+                ],
+                "docstring": "Costruttore di default della classe CIManager"
+            },
+            {
+                "method_name": "getCartaByIdCStri",
                 "parameters": [
                     "id"
                 ],
-                "docstring": []
-            },
-            {
-                "method_name": "addCustomer",
-                "parameters": [
-                    "customer"
-                ],
-                "docstring": []
-            },
-            {
-                "method_name": "deleteCustomer",
-                "parameters": [
-                    "id"
-                ],
-                "docstring": []
+                "docstring": "Metodo che permette la ricerca di una carta d'identita tramite il suo numero \t  invocando il relativo metodo della classe db \t  @param cod il numero della carta d'identit\u00e0 del cittadino. \t  @return l'oggetto di tipo CartaIdentit\u00e0 associata al numero passato come parametro \t  @throws DbException"
             }
         ],
         "attributes": [
-            "repository"
+            "dbCartaIdentita"
         ],
-        "docstring": []
+        "docstring": "La classe CIManager interagisce con le classi di gestione del database   La classe CIManager non ha dipendenze   @author Federico Cinque"
     },
     {
-        "class_name": "Main",
+        "class_name": "Cittadino",
         "methods": [
             {
-                "method_name": "main",
+                "method_name": "getLogin",
+                "parameters": [],
+                "docstring": "costruttore di default vuoto"
+            },
+            {
+                "method_name": "setLogin",
                 "parameters": [
-                    "args"
+                    "log"
                 ],
-                "docstring": []
+                "docstring": "costruttore parametrico che crea l'oggetto \t  cittadino con i dati inseriti da quest'ultimo  \t  all'atto della registrazione nel sistema comunale"
+            },
+            {
+                "method_name": "getIdCittadino",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setIdCittadino",
+                "parameters": [
+                    "idCittadino"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getCognome",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setCognome",
+                "parameters": [
+                    "surname"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getNome",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setNome",
+                "parameters": [
+                    "name"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getDataNascita",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setDataNascita",
+                "parameters": [
+                    "data"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "setLuogoNascita",
+                "parameters": [
+                    "luogo"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getLuogoNascita",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "getEmail",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setEmail",
+                "parameters": [
+                    "mail"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "isAdvertise",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setIsAdvertise",
+                "parameters": [
+                    "ad"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "setNucleoFamiliare",
+                "parameters": [
+                    "nf"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "getNucleoFamiliare",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "getCodiceFiscale",
+                "parameters": [],
+                "docstring": null
+            },
+            {
+                "method_name": "setCodiceFiscale",
+                "parameters": [
+                    "cod_fis"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "toString",
+                "parameters": [],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "ci",
+            "idCittadino",
+            "CodiceFiscale",
+            "Cognome",
+            "Nome",
+            "DataNascita",
+            "LuogoNascita",
+            "Email",
+            "Advertise",
+            "nucleoFamiliare",
+            "Login"
+        ],
+        "docstring": "\u00e8 un JavaBean che gestisce i metodi    get e set degli attributi di un Cittadino   @author Francesco"
+    },
+    {
+        "class_name": "CittadinoManager",
+        "methods": [
+            {
+                "method_name": "getCittadinoByLogin",
+                "parameters": [
+                    "login"
+                ],
+                "docstring": "Costruttore di default della classe CIManager"
+            },
+            {
+                "method_name": "modificaLogin",
+                "parameters": [
+                    "idCitt",
+                    "newLogin"
+                ],
+                "docstring": "Metodo che permette la ricerca di un cittadino tramite la sua login \t  invocando il relativo metodo della classe db \t  @param login \u00e8 la login in base alla quale si vuole effettuare la ricerca \t  @return l'oggetto di tipo cittadino \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaEmail",
+                "parameters": [
+                    "idCittadino",
+                    "email"
+                ],
+                "docstring": "Metodo che permette la modifica della login per uno specifico cittadino \t  invocando il relativo metodo della classe db \t  @param idCitt \u00e8 l'id del cittadino \t  @param newLogin \u00e8 la nuova login del cittadino \t  @return true se l'operazione \u00e8 andata a buon fine, flase altrimenti"
+            },
+            {
+                "method_name": "inserisciCittadino",
+                "parameters": [
+                    "cittadino"
+                ],
+                "docstring": "Metodo che permette la modifica dell'indirizzo e-mail di uno specifico cittadino \t  invocando il relativo metodo della classe db \t  @param idCittadino \u00e8 l'identificativo del cittadino \t  @param email \u00e8 la nuova mail da assegnare al cittadino \t  @return true se l'operazione \u00e8 eseguita con successo, flase altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "ricercaCittadino",
+                "parameters": [
+                    "nome",
+                    "cognome"
+                ],
+                "docstring": "Metodo che permette di inserire un nuovo cittadino \t  invocando il relativo metodo della classe db \t  @param cittadino \u00e8 l'istanza di cittadino \t  @return l'id del cittadino inserito. \t  @throws DbException"
+            },
+            {
+                "method_name": "cancellaCittadino",
+                "parameters": [
+                    "idCitt"
+                ],
+                "docstring": "Metodo che permette la ricerca di un insieme di cittadini in base al loro nome e cognome \t  invocando il relativo metodo della classe db \t  @param nome parametro su cui effettuare la ricerca \t  @param cognome parametro su cui effettuare la ricerca \t  @return una collection di cittadini con il nome e il cognome passato come parametro \t  @throws DbException"
+            },
+            {
+                "method_name": "getCittadinoById",
+                "parameters": [
+                    "idCitt"
+                ],
+                "docstring": "Metodo che permette la cancellazione di un cittadino \t  invocando il relativo metodo della classe db \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @return true se l'operazione \u00e8 eseguita con successo, flase altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaNucleoFamiliare",
+                "parameters": [
+                    "idCitt",
+                    "newid"
+                ],
+                "docstring": "Metodo che permette la ricerca di un cittadino tramite il suo id \t  invocando il relativo metodo della classe db \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @return oggetto di tipo cittadino con id uguale a quello passato come parametro \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaNome",
+                "parameters": [
+                    "idCitt",
+                    "nome"
+                ],
+                "docstring": "Metodo che modifica il nucleo familiare del cittadino dato il suo id \t  invocando il relativo metodo della classe db \t  @param idCitt \u00e8 l'id del cittadino \t  @param newid \u00e8 l'id del nuovo nucleo familiare del cittadino \t  @return true se l'operazione \u00e8 eseguita con successo, flase altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaCognome",
+                "parameters": [
+                    "idCitt",
+                    "cognome"
+                ],
+                "docstring": "Metodo che permette la modifica del nome di uno specifico cittadino \t  invocando il relativo metodo della classe db \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @param nome \u00e8 il nuovo nome da assegnare al cittadino \t  @return true se l'operazione \u00e8 eseguita con successo, flase altrimenti \t  @throws DbException"
+            }
+        ],
+        "attributes": [
+            "dbCittadino"
+        ],
+        "docstring": "La classe CittadinoManager interagisce con le classi di gestione del database   La classe CittadinoManager non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "Comune",
+        "methods": [
+            {
+                "method_name": "getNome",
+                "parameters": [],
+                "docstring": "Costruttore di default"
+            },
+            {
+                "method_name": "setNome",
+                "parameters": [
+                    "n"
+                ],
+                "docstring": "Costruttore parametrico \t  @param n nome del comune \t  @param i indirizzo ip del comune"
+            },
+            {
+                "method_name": "getIndirizzoId",
+                "parameters": [],
+                "docstring": "Preleva il nome del comune \t  @return Restituisce una stringa che contiene il nome del comune"
+            },
+            {
+                "method_name": "setIndirizzoId",
+                "parameters": [
+                    "i"
+                ],
+                "docstring": "Setta il nome del comune \t  @param n la stringa che contiene il nuovo nome del comune \t  @return Restituisce il nuovo nome del comune"
+            }
+        ],
+        "attributes": [
+            "nome",
+            "indirizzoIp"
+        ],
+        "docstring": "La classe Comune permette la comunicazione con gli altri comuni   @author Antonio Leone   @version 1.0"
+    },
+    {
+        "class_name": "ControllerFiles",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
             }
         ],
         "attributes": [],
-        "docstring": []
+        "docstring": "La classe ControllerFiles gestisce l'upload di un file   La classe non ha nessuna dipendenza   @author Francesco Odierna"
+    },
+    {
+        "class_name": "DbAccesso",
+        "methods": [
+            {
+                "method_name": "inserisciAccesso",
+                "parameters": [
+                    "a"
+                ],
+                "docstring": "Metodo che inserisce un accesso all'interno del db \t  @param a Oggetto di tipo Accesso \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "eliminaAccesso",
+                "parameters": [
+                    "log"
+                ],
+                "docstring": "Metodo che elimina un accesso  dal db \t  @param log Stringa che viene usata come login \t  @return True se \u00e8 stato effettuato una cancellazione nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getAccesso",
+                "parameters": [
+                    "log"
+                ],
+                "docstring": "Metodo che restituisce un accesso \t  @param log Stringa che viene usata come login \t  @return Restituisce un oggetto di tipo Accesso \t  @throws DbException"
+            },
+            {
+                "method_name": "getAccessi",
+                "parameters": [],
+                "docstring": "Metodo che restituisce tutti gli accessi memorizzati \t  @return Restituisce una Collection di Accessi \t  @throws DbException"
+            },
+            {
+                "method_name": "controllaLogin",
+                "parameters": [
+                    "login"
+                ],
+                "docstring": "Metodo che permette di controllare l\u0092esistenza della login  \t  @param login Stringa che viene usata come login \t  @return True se la login \u00e8 presente, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "controllaAccesso",
+                "parameters": [
+                    "login",
+                    "password"
+                ],
+                "docstring": "Metodo che permette di controllare la correttezza della login e della  \t  password di un accesso per garantire l'apertura di una sessione autenticata \t  @param login Stringa che viene usata come login \t  @param password Stringa che viene usata come password \t  @return True se l'accesso \u00e8 presente, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaAccesso",
+                "parameters": [
+                    "log",
+                    "a"
+                ],
+                "docstring": "Metodo che modifica un accesso \t  @param log la login che identifica un accesso \t  @param a Accesso con i dati aggiornati \t  @return True se \u00e8 stato effettuata la modifica nel db, False altrimenti"
+            }
+        ],
+        "attributes": [
+            "connection"
+        ],
+        "docstring": "La classe DbAccesso si occupa di gestire le connessioni al db   per consentire gli accessi.   @author Antonio Leone   @version 1.0"
+    },
+    {
+        "class_name": "DbAmministratore",
+        "methods": [
+            {
+                "method_name": "inserisciAmministratore",
+                "parameters": [
+                    "a"
+                ],
+                "docstring": "Metodo che inserisce un amministratore all'interno del db \t  @param i Oggetto di tipo Amministratore \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "eliminaAmministratore",
+                "parameters": [
+                    "matr"
+                ],
+                "docstring": "Metodo che elimina un Amministratore  dal db \t  @param matr l'intero che viene utilizzato come matricola \t  @return True se \u00e8 stato effettuato una cancellazione nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getAmministratoreByName",
+                "parameters": [
+                    "nomeAmm",
+                    "cognAmm"
+                ],
+                "docstring": "Metodo che restituisce un insieme di amministratori \t  @param nomeImp stringa che viene utilizzata come nome dell'amministratore \t  @param cognImp stringa che viene utilizzata come cognome dell'amministratore \t  @return Restituisce una Collection di Amministratori \t  @throws DbException"
+            },
+            {
+                "method_name": "getAmministratoreByMatricola",
+                "parameters": [
+                    "matrAmm"
+                ],
+                "docstring": "Metodo che restituisce un amministratore \t  @param matrImp stringa che viene utilizzato come matricola dell'amministratore \t  @return Restituisce un oggetto di tipo Amministratore \t  @throws DbException"
+            },
+            {
+                "method_name": "getAmministratori",
+                "parameters": [],
+                "docstring": "Metodo che restituisce tutti gli amministratori memorizzati \t  @return Restituisce una Collection di Amministratori \t  @throws DbException"
+            },
+            {
+                "method_name": "getAmministratoreByLogin",
+                "parameters": [
+                    "log"
+                ],
+                "docstring": "Metodo che restituisce un amministratore \t  @param log stringa che viene utilizzata come login dell'amministratore \t  @return Restituisce un oggetto di tipo amministratore \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaAmministratore",
+                "parameters": [
+                    "matr",
+                    "a"
+                ],
+                "docstring": "Metodo che modifica un amministratore \t  @param matr la stringa che identifica l'amministratore \t  @param a Amministratore con i dati aggiornati \t  @return True se \u00e8 stato effettuata una modifica nel db, False altrimenti"
+            }
+        ],
+        "attributes": [
+            "connection"
+        ],
+        "docstring": "La classe DbAmministratore si occupa di gestire le connessioni al db   @author Antonio Leone   @version 1.0"
+    },
+    {
+        "class_name": "DbCambioResidenza",
+        "methods": [
+            {
+                "method_name": "changeResidence",
+                "parameters": [
+                    "cod"
+                ],
+                "docstring": "Metodo che permette la cancellazione della carta d'identit\u00e0\u00a0 del cittadino nel  \t  momento in cui esso cambia residenza verso un comune esterno (aggiornamento del db) \t  @param cod \u00e8 il numero della carta d'identit\u00c3\u00a0 di chi ha chiesto il cambio di residenza verso un comune esterno \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "changeResidenceIn",
+                "parameters": [
+                    "cod",
+                    "v",
+                    "nc"
+                ],
+                "docstring": "Metodo che permette l'aggiornamento della residenza salvata nella carta d'identit\u00c3\u00a0 del cittadino che ha effettuato un cambio \t  di residenza nello stesso comune in cui attualmente risiede.(aggiornamento del db) \t  @param cod \u00e8 il numero della carta d'identit\u00c3\u00a0 \t  @param v \u00e8 la nuova via in cui andr\u00c3\u00a0 a risiedere il cittadino \t  @param nc \u00e8 il nuovo numero civico dell'abitazione del cittadino \t  @return l'oggetto CartaIdentit\u00e0\u00a0 aggiornato  \t  @throws DbException"
+            }
+        ],
+        "attributes": [
+            "connection"
+        ],
+        "docstring": "Classe che si occupa di gestire le connessioni con il database    e di schermare le servet con il DBMS.   @author Michelangelo Cianciulli"
+    },
+    {
+        "class_name": "DbCartaIdentita",
+        "methods": [
+            {
+                "method_name": "ricercaCartaIdentitaByNumero",
+                "parameters": [
+                    "cod"
+                ],
+                "docstring": "Metodo che permette la ricerca di una carta d'identit\u00e0 tramite il suo numero. \t  @param cod \u00e8 il numero della carta d'identit\u00e0\u00a0 del cittadino. \t  @return l'oggetto di tipo CartaIdentit\u00e0\u00a0 associata al numero passato come parametro \t  @throws DbException"
+            },
+            {
+                "method_name": "cancellaCartaIdentita",
+                "parameters": [
+                    "cod"
+                ],
+                "docstring": "Metodo che permette la cancellazione di una carta d'identit\u00e0\u00a0. (aggiornamento del db) \t  @param cod \u00e8\u00a8 il codice della carta d'identit\u00e0\u00a0 che si intende cancellare \t  @return true se l'operazione \u00e8 andata a buon fine \t  @throws DbException"
+            },
+            {
+                "method_name": "registraCartaIdentita",
+                "parameters": [
+                    "c"
+                ],
+                "docstring": "Metodo che permette la registrazione di una nuova carta d'identit\u00e0 all'interno del database \t  @param c \u00e8 l'oggetto di tipo carta d'identit\u00e0 \t  @return true se l'operazione \u00e8 andata a buon fine \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaViaCartaIdentita",
+                "parameters": [
+                    "cod",
+                    "v"
+                ],
+                "docstring": "Metodo che permette la modifica della via in una specifica carta d'identit\u00e0\u00a0. (aggiornamento del db) \t  @param cod \u00e8 il numero della carta d'identit\u00e0\u00a0  \t  @param v \u00e8 la nuova via da registrare nella carta d'identit\u00e0\u00a0 \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaNumeroCivicoCartaIdentita",
+                "parameters": [
+                    "cod",
+                    "nc"
+                ],
+                "docstring": "Metodo che permette la modifica del numero civico in una specifica carta d'identit\u00e0\u00a0. (aggiornamento del db) \t  @param cod \u00e8 il numero della carta d'identit\u00e0 \t  @param nc \u00e8 il nuovo numero civico \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaResidenzaCartaIdentita",
+                "parameters": [
+                    "cod",
+                    "via",
+                    "nc"
+                ],
+                "docstring": "Metodo che permette la modifica della residenza (via e numero civio) in una specifica carta d'identit\u00e0\u00a0. (aggiornamento del db)\u00a0 \t  @param via \u00e8 la nuova via da registrare nella carta d'identit\u00e0\u00a0 \t  @param nc \u00e8 il numero civico da registrare nella carta d'identit\u00e0 \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaDataRilascioCartaIdentita",
+                "parameters": [
+                    "cod",
+                    "d"
+                ],
+                "docstring": "Metodo che permette la modifica della data di rilascio di una specifica carta d'identit\u00e0\u00a0. (aggiornamento del db) \t  @param cod \u00e8 il numero della carta d'identit\u00e0\u00a0 \t  @param d \u00e8 la nuova data di rilascio della carta d'identit\u00e0\u00a0 \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaDataScadenzaCartaIdentita",
+                "parameters": [
+                    "cod",
+                    "d"
+                ],
+                "docstring": "Metodo che permette la modifica della data di scadenza per una specifica carta d'identit\u00e0\u00a0. (aggiornamento del db) \t  @param cod \u00e8 il numero della carta d'identit\u00e0\u00a0 \t  @param d \u00e8 la nuova data di scadenza \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaValidaEspatrio",
+                "parameters": [
+                    "cod",
+                    "esp"
+                ],
+                "docstring": "Metodo che permette la modifica della validit\u00e0\u00a0per l'espatrio di una specifica carta d'identit\u00e0\u00a0. (aggiornamento del db) \t  @param cod \u00e8 il numero della carta d'identit\u00e0\u00a0 \t  @param esp \u00e8 il valore booleano che indica la validit\u00e0 per l'espatrio per la specifica carta d'identit\u00e0\u00a0 \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "ricercaCartaIdentitaByProprietario",
+                "parameters": [
+                    "idC"
+                ],
+                "docstring": "Metodo che permette la ricerca di una carta d'identit\u00e0 a partire dall'id del proprietario   @param idC \u00e8 l'id del cittadino   @return l'oggetto di tipo CartaIdentita dello specifico cittadino.   @throws DbException"
+            }
+        ],
+        "attributes": [
+            "connection"
+        ],
+        "docstring": "Classe che si occupa di gestire le connessioni con    il database e di schermare le servlet dal DBMS.   @author Michelangelo Cianciulli"
+    },
+    {
+        "class_name": "DbCittadino",
+        "methods": [
+            {
+                "method_name": "registraCittadino",
+                "parameters": [
+                    "citt"
+                ],
+                "docstring": "Metodo che permette di registrare un nuovo cittadino. (aggiornamento del db) \t  @param citt \u00e8 l'istanza di cittadino \t  @return l'id del cittadino inserito. \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaNomeCittadino",
+                "parameters": [
+                    "idCitt",
+                    "newname"
+                ],
+                "docstring": "Metodo che permette la modifica del nome di uno specifico cittadino. (aggiornamento del db) \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @param newname il nuovo nome da assegnare al cittadino \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaCognomeCittadino",
+                "parameters": [
+                    "idCitt",
+                    "newsurname"
+                ],
+                "docstring": "Metodo che permette la modifica del cognome di uno specifico cittadino. (aggiornamento del db) \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @param newsurname \u00e8 il nuovo cognome da assegnare al cittadino \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaCodiceFiscaleCittadino",
+                "parameters": [
+                    "idCitt",
+                    "newcf"
+                ],
+                "docstring": "Metodo che permette la modifica del codice fiscale di uno specifico cittadino. (aggiornamento del db) \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @param newcf \u00e8 il nuovo codice fiscale da assegnare al cittadino \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaEmailCittadino",
+                "parameters": [
+                    "idCitt",
+                    "newmail"
+                ],
+                "docstring": "Metodo che permette la modifica dell'indirizzo e-mail di uno specifico cittadino. (aggiornamento del db) \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @param newmail \u00e8 la nuova mail da assegnare al cittadino \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaAdvertise",
+                "parameters": [
+                    "idCitt"
+                ],
+                "docstring": "Metodo che permette la modifica del campo advertise di uno specifico cittadino. (aggiornamento del db) \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "cancellaCittadino",
+                "parameters": [
+                    "idCitt"
+                ],
+                "docstring": "Metodo che permette la cancellazione di un cittadino. (aggiornamento del db) \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            },
+            {
+                "method_name": "getCittadinoByCodice",
+                "parameters": [
+                    "idCitt"
+                ],
+                "docstring": "Metodo che permette la ricerca di un cittadino tramite il suo id. \t  @param idCitt \u00e8 l'identificativo del cittadino \t  @return oggetto di tipo cittadino con id uguale a quello passato come parametro \t  @throws DbException"
+            },
+            {
+                "method_name": "getCittadinoByName",
+                "parameters": [
+                    "name",
+                    "surname"
+                ],
+                "docstring": "Metodo che permette la ricerca di un insieme di cittadini in base al loro nome e cognome. \t  @param name parametro su cui effettuare la ricerca \t  @param surname parametro su cui effettuare la ricerca \t  @return una collection di cittadini con il nome e il cognome passato come parametro \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaLogin",
+                "parameters": [
+                    "idC",
+                    "newLogin"
+                ],
+                "docstring": "Metodo che permette la modifica della login per uno specifico cittadino. (aggiornamento del db) \t  @param idC \u00e8 l'id del cittadino \t  @param newLogin \u00e8 la nuova login del cittadino \t  @return true se l'operazione \u00e8 andata a buon fine"
+            },
+            {
+                "method_name": "getCittadinoByLogin",
+                "parameters": [
+                    "log"
+                ],
+                "docstring": "Metodo che permette la ricerca di un cittadino tramite la sua login. \t  @param log \u00e8 la login in base alla quale si vuole effettuare la ricerca \t  @return l'oggetto di tipo cittadino \t  @throws DbException"
+            },
+            {
+                "method_name": "maxID",
+                "parameters": [],
+                "docstring": "Metodo privato che ritorna l'id dell'ultimo cittadino inserito. \t  @return l'id pi\u00f9 alto della tabella cittadino \t  @throws DbException"
+            },
+            {
+                "method_name": "findIdCittadino",
+                "parameters": [
+                    "cf",
+                    "surname",
+                    "name"
+                ],
+                "docstring": "Metodo che permette di conoscere l'id del cittadino a partire dai suoi dati anagrafici (codice fiscale,cognome,nome) \t  @param cf \u00e8 il codice fiscale parametro per la ricerca \t  @param surname \u00e8 il cognome parametro per la ricerca \t  @param name \u00e8 il nome parametro per la ricerca \t  @return l'id del cittadino se ok, -1 se la ricerca non ha successo"
+            },
+            {
+                "method_name": "findCodiceFiscale",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che permette la ricerca del codice fiscale del cittadino a partire dal suo ID \t  @param id \u00e8 l'id del cittadino \t  @return il codice fiscale del cittadino"
+            },
+            {
+                "method_name": "modificaNucleoFamiliareCittadino",
+                "parameters": [
+                    "idCitt",
+                    "newnucleo"
+                ],
+                "docstring": "Metodo che modifica il nucleo familiare del cittadino dato il suo id \t  @param idCitt \u00e8 l'id del cittadino \t  @param newnucleo \u00e8 il nuovo nucleo familiare del cittadino \t  @return true se l'operazione \u00e8 eseguita con successo \t  @throws DbException"
+            }
+        ],
+        "attributes": [
+            "connection"
+        ],
+        "docstring": "Classe che si occupa di gestire le connessioni con il database    e di schermare le servet con il DBMS.      @author Michelangelo Cianciulli"
+    },
+    {
+        "class_name": "DbComune",
+        "methods": [
+            {
+                "method_name": "inserisciComune",
+                "parameters": [
+                    "c"
+                ],
+                "docstring": "Metodo che inserisce un comune all'interno del db \t  @param c oggetto di tipo Comune \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "eliminaComune",
+                "parameters": [
+                    "nome"
+                ],
+                "docstring": "Metodo che elimina un comune dal db \t  @param nome che identifica il comune \t  @return True se \u00e8 stato effettuato una cancellazione nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getComuneByName",
+                "parameters": [
+                    "nome"
+                ],
+                "docstring": "Metodo che restituisce un comune \t  @param nome la stringa che rappresenta il nome del comune \t  @return Restituisce un oggetto di tipo Comune \t  @throws DbException"
+            }
+        ],
+        "attributes": [
+            "connection"
+        ],
+        "docstring": "La classe DbComune si occupa di gestire le connessioni al db   @author Antonio Leone   @version 1.0"
+    },
+    {
+        "class_name": "DbConnection",
+        "methods": [
+            {
+                "method_name": "createPool",
+                "parameters": [],
+                "docstring": "Questa porzione di codice crea un pool di connessione e definisce i db properties"
+            },
+            {
+                "method_name": "getConnection",
+                "parameters": [],
+                "docstring": "Ritorna una connessione al db, se non \u00e8 gi\u00e0 disponibile ne viene creata una nuova \t  @return una connessione al db \t  @throws SQLException"
+            },
+            {
+                "method_name": "loadDbProperties",
+                "parameters": [],
+                "docstring": "Carica i db properties \t  @throws IOException"
+            },
+            {
+                "method_name": "closePool",
+                "parameters": [],
+                "docstring": "Metodo che chiude il pool di connessione"
+            }
+        ],
+        "attributes": [
+            "dbProperties",
+            "cpds"
+        ],
+        "docstring": "Questa classe fornisce un pool di connesione   @author Antonio Leone"
+    },
+    {
+        "class_name": "DbException",
+        "methods": [],
+        "attributes": [
+            "serialVersionUID"
+        ],
+        "docstring": "La classe DbException viene lanciata quando si verifica un eccezione legata al db   @author Antonio Leone   @version 1.0"
+    },
+    {
+        "class_name": "DbImpiegato",
+        "methods": [
+            {
+                "method_name": "inserisciImpiegato",
+                "parameters": [
+                    "i"
+                ],
+                "docstring": "Metodo che inserisce un impiegato all'interno del db \t  @param i Oggetto di tipo Impiegato \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "eliminaImpiegato",
+                "parameters": [
+                    "matr"
+                ],
+                "docstring": "Metodo che elimina un impiegato  dal db \t  @param matr la stringa che viene utilizzato come matricola \t  @return True se \u00e8 stato effettuato una cancellazione nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getImpiegatoByName",
+                "parameters": [
+                    "nomeImp",
+                    "cognImp"
+                ],
+                "docstring": "Metodo che restituisce un insieme di impiegati \t  @param nomeImp stringa che viene utilizzata come nome dell'impiegato \t  @param cognImp stringa che viene utilizzata come cognome dell'impiegato \t  @return Restituisce una Collection di Impiegati \t  @throws DbException"
+            },
+            {
+                "method_name": "getImpiegatoByMatricola",
+                "parameters": [
+                    "matrImp"
+                ],
+                "docstring": "Metodo che restituisce un impiegato \t  @param matrImp stringa che viene utilizzato come matricola dell'impiegato \t  @return Restituisce un oggetto di tipo Impiegato \t  @throws DbException"
+            },
+            {
+                "method_name": "getImpiegati",
+                "parameters": [],
+                "docstring": "Metodo che restituisce tutti gli impiegati memorizzati \t  @return Restituisce una Collection di impiegati \t  @throws DbException"
+            },
+            {
+                "method_name": "getImpiegatoByLogin",
+                "parameters": [
+                    "log"
+                ],
+                "docstring": "Metodo che restituisce un impiegato \t  @param log stringa che viene utilizzata come login dell'impiegato \t  @return Restituisce un oggetto di tipo impiegato \t  @throws DbException"
+            },
+            {
+                "method_name": "modificaImpiegato",
+                "parameters": [
+                    "matr",
+                    "a"
+                ],
+                "docstring": "Metodo che modifica un impiegato \t  @param matr la stringa che identifica l'impiegato \t  @param a impiegato con i dati aggiornati \t  @return True se \u00e8 stato effettuato una modifica nel db, False altrimenti"
+            }
+        ],
+        "attributes": [
+            "connection"
+        ],
+        "docstring": "La classe DbImpiegato si occupa di gestire le connessioni al db   @author Antonio Leone   @version 1.0"
+    },
+    {
+        "class_name": "DbNucleoFamiliare",
+        "methods": [
+            {
+                "method_name": "inserisciNucleoFamiliare",
+                "parameters": [
+                    "nf"
+                ],
+                "docstring": "Metodo che inserisci un oggetto nucleoFamiliare nel db \t  @param nf Oggetto di tipo nucleofamiliare \t  @return Restituisce l'id del nucleo familiare inserito \t  @throws DbException"
+            },
+            {
+                "method_name": "eliminaNucleoFamiliare",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che elimina un nucleoFamiliare  dal db \t  @param id l'intero che viene utilizzato come id del nucleoFamiliare \t  @return True se \u00e8 stato effettuato una cancellazione nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getStatoFamiglia",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che restituisce i componeneti di uno stato di famiglia \t  @param id intero che viene usato come id del nucleo familiare \t  @return Restituisce una Collection di cittadini \t  @throws DbException"
+            },
+            {
+                "method_name": "controllaIdFamiglia",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che permette di controllare l\u0092esistenza di un nucleo familiare \t  @param id l'intero che viene utilizzato come id del nucleo familiare \t  @return True se l'id \u00e8 presente, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "noteFamiglia",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che permette la ricerca di un nucleo familiare per conoscere le eventuali note \t  @param id l'intero che viene utilizzato come id del nucleo familiare \t  @return Restituisce le note del nucleo familiare \t  @throws DbException"
+            },
+            {
+                "method_name": "setCapoFamiglia",
+                "parameters": [
+                    "idF",
+                    "idC"
+                ],
+                "docstring": "Metodo che modifica un capo famiglia \t  @param idF l'intero che viene utilizzato come id della famiglia \t  @param idC l'intero che viene utilizzato come id del capo famiglia \t  @return True se la modifica ha avuto successo, altrimenti False \t  @throws DbException"
+            },
+            {
+                "method_name": "getNucleoFamiliareById",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che restituisce un nucleo familiare \t  @param id l'intero che contiene l'id del nucleo familiare \t  @return Restituisce un oggetto di tipo NucleoFamiliare \t  @throws DbException"
+            },
+            {
+                "method_name": "lastId",
+                "parameters": [],
+                "docstring": "Metodo che modifica il numero di componenti del nucleo familiare \t  @param idF l'intero che viene utilizzato come id della famiglia \t  @param n l'intero che rappresenta il nuovo numero di componenti \t  @return True se la modifica ha avuto successo, altrimenti False \t  @throws DbException"
+            },
+            {
+                "method_name": "setnComponenti",
+                "parameters": [
+                    "idF",
+                    "n"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "connection"
+        ],
+        "docstring": "La classe DbNucleoFamiliare si occupa di gestire le connessioni al db   @author Antonio Leone   @version 1.0"
+    },
+    {
+        "class_name": "DbRichiesta",
+        "methods": [
+            {
+                "method_name": "inserisciRichiesta",
+                "parameters": [
+                    "ric"
+                ],
+                "docstring": "Metodo che inserisce una richiesta all'interno del db \t  @param ric oggetto di tipo Richiesta \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "eliminaRichiesta",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che elimina una richiesta dal db \t  @param id l'intero che viene usato come id della richiesta \t  @return True se \u00e8 stato effettuato una cancellazione nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getRichiestaById",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che restituisce una richiesta \t  @param id l'intero che viene usato come id della richiesta \t  @return Restituisce un oggetto di tipo Richiesta \t  @throws DbException"
+            },
+            {
+                "method_name": "getRichiestaByRichiedente",
+                "parameters": [
+                    "idR"
+                ],
+                "docstring": "Metodo che restituisce un insieme di richieste \t  @param idR l'intero che viene usato come id del richiedente \t  @return Restituisce una Collection di Richieste \t  @throws DbException"
+            },
+            {
+                "method_name": "getRichiestaByStato",
+                "parameters": [
+                    "idR",
+                    "stato"
+                ],
+                "docstring": "Metodo che restituisce un insieme di richieste \t  @param idR l'intero che viene usato come id del richiedente \t  @param stato la stringa che viene usata come stato della richiesta \t  @return Restituisce una Collection di tipo Richiesta \t  @throws DbException"
+            },
+            {
+                "method_name": "getRichiestaByTipo",
+                "parameters": [
+                    "idR",
+                    "tipo"
+                ],
+                "docstring": "Metodo che restituisce un insieme di richieste \t  @param idR l'intero che viene usato come id del richiedente \t  @param tipo la stringa che viene usata come tipologia della richiesta \t  @return Restituisce una Collection di tipo Richiesta \t  @throws DbException"
+            },
+            {
+                "method_name": "setStatoRichiesta",
+                "parameters": [
+                    "idR",
+                    "stato"
+                ],
+                "docstring": "Metodo che modifica lo stato di una richiesta \t  @param idR l'intero che viene utilizzato come id della richiesta \t  @param stato la stringa che viene utilizzato come stato della richiesta \t  @return True se la modifica ha avuto successo, altrimenti False \t  @throws SQLException"
+            },
+            {
+                "method_name": "getRichieste",
+                "parameters": [],
+                "docstring": "Metodo che restituisce un insieme di richieste \t  @return Restituisce una Collection di Richieste \t  @throws DbException"
+            }
+        ],
+        "attributes": [
+            "connection"
+        ],
+        "docstring": "La classe DbRichiesta si occupa di gestire le connessioni al db   @author Antonio Leone   @version 1.0"
+    },
+    {
+        "class_name": "Impiegato",
+        "methods": [
+            {
+                "method_name": "getNome",
+                "parameters": [],
+                "docstring": "Costruttore vuoto della classe Impiegato"
+            },
+            {
+                "method_name": "setNome",
+                "parameters": [
+                    "nome"
+                ],
+                "docstring": "Costruttore della classe Impiegato \t  @param Nome \t  @param Cognome \t  @param Matricola \t  @param Email \t  @param Login"
+            },
+            {
+                "method_name": "getCognome",
+                "parameters": [],
+                "docstring": "Metodo che restituisce il nome dell'impiegato \t  @return Nome"
+            },
+            {
+                "method_name": "setCognome",
+                "parameters": [
+                    "cognome"
+                ],
+                "docstring": "Metodo che imposta il nome dell'impiegato \t  @param nome"
+            },
+            {
+                "method_name": "getMatricola",
+                "parameters": [],
+                "docstring": "Metodo che restituisce il cognome dell'impiegato \t  @return Cognome"
+            },
+            {
+                "method_name": "setMatricola",
+                "parameters": [
+                    "matricola"
+                ],
+                "docstring": "Metodo che imposta il cognome dell'impiegato \t  @param cognome"
+            },
+            {
+                "method_name": "getEmail",
+                "parameters": [],
+                "docstring": "Metodo che restituisce la matricola dell'impiegato \t  @return Matricola"
+            },
+            {
+                "method_name": "setEmail",
+                "parameters": [
+                    "email"
+                ],
+                "docstring": "Metodo che imposta  la matricola dell'impiegato \t  @param matricola"
+            },
+            {
+                "method_name": "getLogin",
+                "parameters": [],
+                "docstring": "Metodo che restituisce l'e-mail dell'impiegato \t  @return Email"
+            },
+            {
+                "method_name": "setLogin",
+                "parameters": [
+                    "login"
+                ],
+                "docstring": "Metodo che imposta l'e-mail dell'impiegato \t  @param email"
+            },
+            {
+                "method_name": "toString",
+                "parameters": [],
+                "docstring": "Metodo che restituisce la login dell'impiegato \t  @return Login"
+            }
+        ],
+        "attributes": [
+            "Nome",
+            "Cognome",
+            "Matricola",
+            "Email",
+            "Login"
+        ],
+        "docstring": "La classe Impiegato permette solo all'amministratore la gestione degli impiegati   La classe Impiegato non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ImpiegatoManager",
+        "methods": [
+            {
+                "method_name": "modificaImpiegato",
+                "parameters": [
+                    "matricola",
+                    "newImpiegato"
+                ],
+                "docstring": "Costruttore di default della classe ImpiegatoManager"
+            },
+            {
+                "method_name": "ricercaImpiegatoByMatricola",
+                "parameters": [
+                    "matricola"
+                ],
+                "docstring": "Metodo che modifica un impiegato \t  invocando il relativo metodo della classe db \t  @param matricola la stringa che identifica l'impiegato \t  @param newImpiegato impiegato con i dati aggiornati \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti"
+            },
+            {
+                "method_name": "inserisciImpiegato",
+                "parameters": [
+                    "newImpiegato"
+                ],
+                "docstring": "Metodo che restituisce un impiegato \t  invocando il relativo metodo della classe db \t  @param matricola stringa che viene utilizzato come matricola dell'impiegato \t  @return Restituisce un oggetto di tipo Impiegato \t  @throws DbException"
+            },
+            {
+                "method_name": "eliminaImpiegato",
+                "parameters": [
+                    "matricola"
+                ],
+                "docstring": "Metodo che inserisce un impiegato all'interno del db \t  invocando il relativo metodo della classe db \t  @param newImpiegato Oggetto di tipo Impiegato \t  @return True se \u00e8 stato effettuato un inserimento nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getImpiegatoByLogin",
+                "parameters": [
+                    "login"
+                ],
+                "docstring": "Metodo che elimina un impiegato  dal db \t  invocando il relativo metodo della classe db \t  @param matricola la stringa che viene utilizzato come matricola \t  @return True se \u00e8 stato effettuato una cancellazione nel db, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "getImpiegatoByName",
+                "parameters": [
+                    "nomeImp",
+                    "cognImp"
+                ],
+                "docstring": "Metodo che restituisce un impiegato \t  invocando il relativo metodo della classe db \t  @param login stringa che viene utilizzata come login dell'impiegato \t  @return Restituisce un oggetto di tipo impiegato \t  @throws DbException"
+            },
+            {
+                "method_name": "getImpiegati",
+                "parameters": [],
+                "docstring": "Metodo che restituisce un insieme di impiegati \t  invocando il relativo metodo della classe db \t  @param nomeImp stringa che viene utilizzata come nome dell'impiegato \t  @param cognImp stringa che viene utilizzata come cognome dell'impiegato \t  @return Restituisce una Collection di Impiegati \t  @throws DbException"
+            }
+        ],
+        "attributes": [
+            "dbImpiegato"
+        ],
+        "docstring": "La classe ImpiegatoManager interagisce con le classi di gestione del database   La classe ImpiegatoManager non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "NucleoFamiliare",
+        "methods": [
+            {
+                "method_name": "getIdNucleoFamiliare",
+                "parameters": [],
+                "docstring": "Costruttore standard"
+            },
+            {
+                "method_name": "setIdNucleoFamiliare",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "@param idNucleoFamiliare\t\tcontiene l'id del gruppo familiare \t  @param capofamiglia\t\t\tcontiene l'id del capofamiglia \t  @param nota\t\t\t\t\teventuale nota"
+            },
+            {
+                "method_name": "getCapoFamiglia",
+                "parameters": [],
+                "docstring": "Restituisce l'id dello stato di famiglia \t  @return\tuna stringa che contiene l'id dello stato di famiglia"
+            },
+            {
+                "method_name": "setCapoFamiglia",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "Setta l'id dello stato di famiglia \t  @return\tuna stringa che contiene il nuovo id dello stato di famiglia"
+            },
+            {
+                "method_name": "getNote",
+                "parameters": [],
+                "docstring": "Restituisce l'id del capofamiglia \t  @return\tuna stringa che contiene l'id del capofamiglia"
+            },
+            {
+                "method_name": "setNote",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "Setta l'id del capofamiglia \t  @return\tuna stringa che contiene il nuovo id del capofamiglia"
+            },
+            {
+                "method_name": "getNComponenti",
+                "parameters": [],
+                "docstring": "Restituisce le note rilasciate \t  @return\tuna stringa che contiene una nota rilasciata in precedenza"
+            },
+            {
+                "method_name": "setNComponenti",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "Inserisce una nota \t  @return\tuna stringa che contiene la nota rilasciata"
+            }
+        ],
+        "attributes": [
+            "idNucleoFamiliare",
+            "capoFamiglia",
+            "nota",
+            "nComponenti"
+        ],
+        "docstring": "Questa classe si occupa di gestire lo stato di famiglia del cittadino   @author Christian Ronca"
+    },
+    {
+        "class_name": "NucleoFamiliareManager",
+        "methods": [
+            {
+                "method_name": "inserisciNucleo",
+                "parameters": [
+                    "nf"
+                ],
+                "docstring": "Costruttore di default della classe NucleoFamiliareManager"
+            },
+            {
+                "method_name": "controllaidFamiglia",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che inserisci un oggetto nucleoFamiliare nel db \t  invocando il relativo metodo della classe db \t  @param nf Oggetto di tipo nucleofamiliare \t  @return Restituisce l'id del nucleo familiare inserito \t  @throws DbException"
+            },
+            {
+                "method_name": "getNComponentiNucleo",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che permette di controllare l\u00d5esistenza di un nucleo familiare \t  invocando il relativo metodo della classe db \t  @param id l'intero che viene utilizzato come id del nucleo familiare \t  @return True se l'id \u00e8 presente, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "setCapoFamiglia",
+                "parameters": [
+                    "id",
+                    "IdCitt"
+                ],
+                "docstring": "Metodo che restituisce il numero di componenti del nucleo familiare \t  invocando il relativo metodo della classe db \t  @param id del nucleo familiare di cui si vuole il numero di componenti \t  @return True se l'id \u00e8 presente, False altrimenti \t  @throws DbException"
+            },
+            {
+                "method_name": "incrementaComponenti",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che modifica un capo famiglia \t  invocando il relativo metodo della classe db \t  @param id l'intero che viene utilizzato come id della famiglia \t  @param IdCitt l'intero che viene utilizzato come id del capo famiglia \t  @return True se la modifica ha avuto successo, altrimenti False \t  @throws DbException"
+            },
+            {
+                "method_name": "decrementaComponenti",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che incrementa il numero di componenti del nucleo familiare \t  invocando un metodo della classe db \t  @param id del nucleo familiare che si vuole modificare \t  @return True se la modifica ha avuto successo, altrimenti False \t  @throws DbException"
+            },
+            {
+                "method_name": "getNucleo",
+                "parameters": [
+                    "id"
+                ],
+                "docstring": "Metodo che decrementa il numero di componenti del nucleo familiare \t  invocando un metodo della classe db \t  @param id del nucleo familiare che si vuole modificare \t  @return True se la modifica ha avuto successo, altrimenti False \t  @throws DbException"
+            }
+        ],
+        "attributes": [
+            "nucleoF"
+        ],
+        "docstring": "La classe NucleoFamiliareManager interagisce con le classi di gestione del database   La classe NucleoFamiliareManager non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "Richiesta",
+        "methods": [
+            {
+                "method_name": "getIdRichiesta",
+                "parameters": [],
+                "docstring": "Costruttore di default"
+            },
+            {
+                "method_name": "setIdRichiesta",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "Costruttore paramentrico  \t  @param idRichiesta \t\tid della richiesta \t  @param tipo \t\t\t\ttipo della richiesta  \t  @param data \t\t\t\tdata in cui \u00e8 stata effettuata la richiesta \t  @param richiedente \t\tid del richiedente \t  @param stato \t\t\tstato di avanzamento della richiesta \t  @param documento \t\tlink al documento richiesto"
+            },
+            {
+                "method_name": "getTipo",
+                "parameters": [],
+                "docstring": "Costruttore paramentrico  \t  @param tipo \t\t\t\ttipo della richiesta  \t  @param data \t\t\t\tdata in cui \u00e8 stata effettuata la richiesta \t  @param richiedente \t\tid del richiedente \t  @param stato \t\t\tstato di avanzamento della richiesta \t  @param documento \t\tlink al documento richiesto"
+            },
+            {
+                "method_name": "setTipo",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "Preleva l'id della richiesta \t  @return\tuna stringa con l'id della richiesta"
+            },
+            {
+                "method_name": "getData",
+                "parameters": [],
+                "docstring": "Setta un nuovo id alla richiesta \t  @param str\tprende in input una stringa che contiene il nuovo id della richiesta \t  @return\t\tuna stringa che contiene il nuovo id"
+            },
+            {
+                "method_name": "setData",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "Preleva il tipo di richiesta effettuata \t  @return\tuna stringa che contiene il tipo di richiesta"
+            },
+            {
+                "method_name": "getRichiedente",
+                "parameters": [],
+                "docstring": "Setta il tipo della richiesta \t  @param str\tprende in input una stringa che contiene il tipo della richiesta \t  @return\t\tuna stringa che contiene il nuovo tipo"
+            },
+            {
+                "method_name": "setRichiedente",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "Preleva la data in cui \u00e8 stata fatta la richiesta \t  @return una stringa che contiene la data della richiesta"
+            },
+            {
+                "method_name": "getStato",
+                "parameters": [],
+                "docstring": "Setta la data alla richiesta \t  @param str\tprende in input una stringa che contiene la data della richiesta \t  @return\t\tuna stringa che contiene la nuova data"
+            },
+            {
+                "method_name": "setStato",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "Preleva l'id del richiedente che ha effettuato la richiesta \t  @return\tuna stringa con l'id della richiesta"
+            },
+            {
+                "method_name": "getDocumento",
+                "parameters": [],
+                "docstring": "Setta il richiedente della richiesta \t  @param str\tprende in input una stringa che contiene il richiedente della richiesta \t  @return\t\tuna stringa che contiene il richiedente"
+            },
+            {
+                "method_name": "setDocumento",
+                "parameters": [
+                    "str"
+                ],
+                "docstring": "Preleva lo stato della richiesta \t  @return\tuna stringa con l'id della richiesta"
+            },
+            {
+                "method_name": "isAccettata",
+                "parameters": [],
+                "docstring": "Setta lo stato della richiesta \t  @param str\tprende in input una stringa che contiene la data della richiesta \t  @return\t\tuna stringa che contiene la nuova data"
+            },
+            {
+                "method_name": "isRifiutata",
+                "parameters": [],
+                "docstring": "Preleva il link al documento richiesto \t  @return\tuna stringa con l'id della richiesta"
+            }
+        ],
+        "attributes": [
+            "idRichiesta",
+            "tipo",
+            "data",
+            "richiedente",
+            "stato",
+            "documento"
+        ],
+        "docstring": "Classe che gestisce i metodi dell'oggetto Richiesta   @author \tChristian Ronca   @version 1.0"
+    },
+    {
+        "class_name": "ServletAnnulla",
+        "methods": [
+            {
+                "method_name": "doGet",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletAnnulla annulla l'operazione che l'utente stava eseguendo   La classe ServletAnnulla non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletCaricaPratica",
+        "methods": [
+            {
+                "method_name": "doGet",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletCaricaPratica carica in una sessione gli oggetti Cittadino e CartaIdentita   La classe dipende da DbCittadino e DbCartaIdentita   @author Christian Ronca"
+    },
+    {
+        "class_name": "ServletCreaPdfCambioAbitazione",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "aggiornaDB",
+                "parameters": [
+                    "indirnew",
+                    "num_civnew"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "cancellaDB",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "serialVersionUID",
+            "session"
+        ],
+        "docstring": "La classe ServletCreaPdfCambioAbitazione un file PDF in base ai dati ricevuti da una pagina JSP   La classe non ha nessuna dipendenza   @author Christian Ronca"
+    },
+    {
+        "class_name": "ServletCreaPdfCertificati",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "serialVersionUID"
+        ],
+        "docstring": "La classe ServletCreaPdfCertificati crea un file PDF con i dati ricevuti da una pagina JSP   La classe non ha nessuna dipendenza   @author Christian Ronca"
+    },
+    {
+        "class_name": "ServletCreaPdfCittadino",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "serialVersionUID",
+            "session"
+        ],
+        "docstring": "La classe ServletCreaPdfCittadino un file PDF in base ai dati ricevuti da una pagina JSP   La classe non ha nessuna dipendenza   @author Christian Ronca"
+    },
+    {
+        "class_name": "ServletEliminaAmministratore",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletEliminaAmministratore ricerca ed elimina un amministratore   La classe ServletEliminaAmministratore non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletEliminaCittadino",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletEliminaCittadino ricerca ed elimina un cittadino   La classe ServletEliminaCittadino non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletEliminaImpiegato",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletEliminaImpiegato ricerca ed elimina un impiegato   La classe ServletEliminaImpiegato non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletInserisciAmministratore",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "nome",
+            "cognome",
+            "email",
+            "matricola",
+            "login",
+            "password",
+            "tipo"
+        ],
+        "docstring": "La classe ServletInserisciAmministratore inserisce un amministratore nel database   La classe ServletInserisciAmministratore non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletInserisciCittadino",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "creaNucleoF",
+                "parameters": [],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "nome",
+            "cognome",
+            "cf",
+            "giorno",
+            "mese",
+            "anno",
+            "dataN",
+            "luogoN",
+            "email",
+            "advertise",
+            "idNF",
+            "login",
+            "tipo",
+            "cittadino",
+            "NFM"
+        ],
+        "docstring": "La classe ServletInserisciCittadino inserisce un cittadino nel database   La classe ServletInserisciCittadino non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletInserisciImpiegato",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "nome",
+            "cognome",
+            "email",
+            "matricola",
+            "login",
+            "password",
+            "tipo"
+        ],
+        "docstring": "La classe ServletInserisciImpiegato inserisce un impiegato nel database   La classe ServletInserisciImpiegato non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletLogin",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletLogin effettua l'operazione di autenticazione di un utente nel sistema   La classe ServletLogin non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletLogout",
+        "methods": [
+            {
+                "method_name": "doGet",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletLogout effettua l'operazione di logout di un utente dal sistema   La classe ServletLogout non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletModificaAccesso",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "login",
+            "password",
+            "cpassword",
+            "tipo"
+        ],
+        "docstring": "La classe ServletModificaAccesso che effettua l'operazione di modifica di un accesso   La classe ServletModificaAccesso non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletModificaAmministratore",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "nome",
+            "cognome",
+            "email",
+            "matricola",
+            "login",
+            "password",
+            "tipo"
+        ],
+        "docstring": "La classe ServletModificaAmministratore che effettua l'operazione di modifica di un amministratore   La classe ServletModificaAmministratore non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletModificaCittadino",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "creaNucleoF",
+                "parameters": [],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "nome",
+            "cognome",
+            "email",
+            "idNF",
+            "cittadino",
+            "NFM",
+            "CM"
+        ],
+        "docstring": "La classe ServletModificaCittadino che effettua l'operazione di modifica di un cittadino   La classe ServletModificaCittadino non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletModificaImpiegato",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "nome",
+            "cognome",
+            "email",
+            "matricola",
+            "login",
+            "password",
+            "tipo"
+        ],
+        "docstring": "La classe ServletModificaImpiegato che effettua l'operazione di modifica di un impiegato   La classe ServletModificaImpiegato non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletModificaResidenza",
+        "methods": [
+            {
+                "method_name": "init",
+                "parameters": [
+                    "conf"
+                ],
+                "docstring": "from \u00e8 la cartella in cui cercare il \t\t  file di nome \"nome\" e di tipo \".pdf\" \t\t  @param from \t\t  @param nome \t\t  @param tipo"
+            }
+        ],
+        "attributes": [],
+        "docstring": "metodo che cerca i file contenenti \t  le richieste di cambio di residenza \t  da parte dei cittadini.Tale cartella viene \t  salvata sul server su cui l'impiegato \t  pu\u00f2 accedervi per reperire le informazioni \t  utili alla compilazione del modulo \t  che deve essere registrato all'interno \t  dell'archivio comunale"
+    },
+    {
+        "class_name": "ServletMostraAccesso",
+        "methods": [
+            {
+                "method_name": "doGet",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletMostraAccesso mostra i dati relativi all'accesso di un impieagto o amministratore   La classe ServletMostraAccesso non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletMostraAccessoA",
+        "methods": [
+            {
+                "method_name": "doGet",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletMostraAccessoA mostra i dati relativi all'accesso di un cittadino   La classe ServletMostraAccessoA non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletRecuperoPassword",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            },
+            {
+                "method_name": "generaPassword",
+                "parameters": [],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "email",
+            "ci",
+            "login",
+            "tipo"
+        ],
+        "docstring": "La classe ServletRecuperoPassword gestisce l'operazione di recupero password per un cittadino   La classe ServletRecuperoPassword non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletRegistraCittadino",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "nome",
+            "cognome",
+            "email",
+            "ci",
+            "cf",
+            "login",
+            "password",
+            "tipo"
+        ],
+        "docstring": "La classe ServletRegistraCittadino gestisce l'operazione di registrazione    di un cittadino nel sistema   La classe ServletRegistraCittadino non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletRicercaAmministratore",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletRicercaAmministratore ricerca e restituisce i dati di un amministratore   La classe ServletRicercaAmministratore non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletRicercaCittadino",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletRicercaCittadino ricerca e restituisce i dati di un cittadino   La classe ServletRicercaCittadino non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletRicercaImpiegato",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletRicercaImpiegato ricerca e restituisce i dati di un impiegato   La classe ServletRicercaImpiegato non ha dipendenze   @author Federico Cinque"
+    },
+    {
+        "class_name": "ServletRicercaPratica",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "La classe ServletRicercaPratica restituisce una pratica specificata nel motore di ricerca   La classe dipende dalla classe DbRichieste   @author Christian Ronca"
+    },
+    {
+        "class_name": "ServletRisposta",
+        "methods": [
+            {
+                "method_name": "doPost",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [],
+        "docstring": "servlet di risposta lato server destinata al client"
+    },
+    {
+        "class_name": "ServletStatoDiFamiglia",
+        "methods": [
+            {
+                "method_name": "doGet",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "serialVersionUID"
+        ],
+        "docstring": "La classe ServletStatoDiFamiglia restituisce una lista dei membri di una famiglia   La classe dipende dalla classe DbNucleoFamiliare   @author Christian Ronca"
+    },
+    {
+        "class_name": "ServletVisualizzaPratiche",
+        "methods": [
+            {
+                "method_name": "doGet",
+                "parameters": [
+                    "request",
+                    "response"
+                ],
+                "docstring": null
+            }
+        ],
+        "attributes": [
+            "serialVersionUID"
+        ],
+        "docstring": "La classe ServletVisualizzaPratiche restituisce una lista di richieste   La classe dipende dalla classe DbRichieste   @author Christian Ronca"
     }
 ]
