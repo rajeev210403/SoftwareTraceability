@@ -1,0 +1,657 @@
+{
+    "UC10E1.txt": {
+        "EditApptTypeAction": 3,
+        "GetVisitRemindersAction": 3,
+        "AdverseEventBean": 3
+    },
+    "UC10E2.txt": {
+        "ChronicDiseaseRiskAction": 3,
+        "EditHealthHistoryAction": 3,
+        "EditOfficeVisitAction": 3
+    },
+    "UC10S1.txt": {
+        "MyDiagnosisAction": 12,
+        "EditOfficeVisitAction": 10,
+        "EditPHRAction": 10
+    },
+    "UC10S2.txt": {
+        "HealthRecord": 4,
+        "DeclareHCPAction": 3,
+        "MyDiagnosisAction": 3
+    },
+    "UC11E1.txt": {
+        "AdverseEventBean": 3,
+        "EditApptTypeAction": 2,
+        "GetVisitRemindersAction": 2
+    },
+    "UC11E2.txt": {
+        "EditPHRAction": 4,
+        "ChronicDiseaseRiskAction": 3,
+        "EditHealthHistoryAction": 3
+    },
+    "UC11S1.txt": {
+        "AddOfficeVisitAction": 11,
+        "EditOfficeVisitForm": 11,
+        "MyDiagnosisAction": 10
+    },
+    "UC11S2.txt": {
+        "MyDiagnosisAction": 8,
+        "OfficeVisitDAO": 7,
+        "OfficeVisitBean": 6
+    },
+    "UC12.txt": {
+        "AddApptAction": 6,
+        "AddHCPAction": 5,
+        "AddUAPAction": 5
+    },
+    "UC13.txt": {
+        "EditPHRAction": 4,
+        "EditRepresentativesAction": 4,
+        "AddOfficeVisitAction": 3
+    },
+    "UC13E1.txt": {
+        "GetVisitRemindersAction": 3,
+        "AdverseEventBean": 3,
+        "PriorDiagnosisFactor": 3
+    },
+    "UC15E1.txt": {
+        "UpdateCPTCodeListAction": 3,
+        "PatientValidator": 3,
+        "AddApptAction": 2
+    },
+    "UC15S1.txt": {
+        "UpdateCPTCodeListAction": 27,
+        "CPTCodesDAO": 26,
+        "AdverseEventBean": 6
+    },
+    "UC15S2.txt": {
+        "UpdateICDCodeListAction": 31,
+        "ICDCodesDAO": 30,
+        "DiagnosisBean": 8
+    },
+    "UC15S3.txt": {
+        "UpdateNDCodeListAction": 14,
+        "NDCodesDAO": 14,
+        "HospitalBean": 4
+    },
+    "UC15S4.txt": {
+        "UpdateLOINCListAction": 15,
+        "LOINCDAO": 15,
+        "UpdateCPTCodeListAction": 7
+    },
+    "UC16.txt": {
+        "ChronicDiseaseMediator": 10,
+        "Type1DiabetesRisks": 9,
+        "Type2DiabetesRisks": 9
+    },
+    "UC16E1.txt": {
+        "EditMonitoringListAction": 2,
+        "GetVisitRemindersAction": 2,
+        "ApptBean": 2
+    },
+    "UC17S1.txt": {
+        "OfficeVisitDAO": 6,
+        "RiskDAO": 5,
+        "EditOfficeVisitAction": 4
+    },
+    "UC17S2.txt": {
+        "PatientDAO": 5,
+        "DateUtil": 4,
+        "GetVisitRemindersAction": 4
+    },
+    "UC17S3.txt": {
+        "GetVisitRemindersAction": 4,
+        "TransactionDAO": 4,
+        "PatientDAO": 3
+    },
+    "UC18E1.txt": {
+        "AddApptAction": 2,
+        "EditApptTypeAction": 2,
+        "ManageHospitalAssignmentsAction": 2
+    },
+    "UC18E2.txt": {
+        "AddApptAction": 2,
+        "AddRemoteMonitoringDataAction": 2,
+        "EditApptTypeAction": 2
+    },
+    "UC18S1.txt": {
+        "AdverseEventBean": 3,
+        "FamilyMemberBean": 3,
+        "HCPDiagnosisBean": 3
+    },
+    "UC18S2.txt": {
+        "UpdateHospitalListAction": 6,
+        "AddApptAction": 5,
+        "AddOfficeVisitAction": 5
+    },
+    "UC19E1.txt": {
+        "AdverseEventBean": 3,
+        "EditApptTypeAction": 2,
+        "GetVisitRemindersAction": 2
+    },
+    "UC19E2.txt": {
+        "AddOfficeVisitAction": 2,
+        "AddPatientAction": 2,
+        "ChronicDiseaseRiskAction": 2
+    },
+    "UC19S1.txt": {
+        "OfficeVisitDAO": 6,
+        "PatientDAO": 6,
+        "RemoteMonitoringDAO": 6
+    },
+    "UC19S2.txt": {
+        "MonitorAdverseEventAction": 5,
+        "EditOfficeVisitValidator": 5,
+        "EditHealthHistoryAction": 4
+    },
+    "UC19S3.txt": {
+        "MonitorAdverseEventAction": 7,
+        "PrescriptionBean": 7,
+        "EditOfficeVisitValidator": 7
+    },
+    "UC1E1.txt": {
+        "EditOfficeVisitValidator": 4,
+        "MessageValidator": 4,
+        "AddUAPAction": 3
+    },
+    "UC1E2.txt": {
+        "AddApptAction": 2,
+        "AddRemoteMonitoringDataAction": 2,
+        "ChronicDiseaseRiskAction": 2
+    },
+    "UC1S1.txt": {
+        "ResetPasswordAction": 12,
+        "SendMessageAction": 10,
+        "AuthDAO": 10
+    },
+    "UC1S2.txt": {
+        "DiagnosisBean": 4,
+        "SurveyBean": 4,
+        "OfficeVisitDAO": 4
+    },
+    "UC21E1.txt": {
+        "AdverseEventBean": 3,
+        "EditApptTypeAction": 2,
+        "GetVisitRemindersAction": 2
+    },
+    "UC21E2.txt": {
+        "AddOfficeVisitAction": 2,
+        "AddPatientAction": 2,
+        "ChronicDiseaseRiskAction": 2
+    },
+    "UC21S1.txt": {
+        "AddERespAction": 2,
+        "AddUAPAction": 2,
+        "DeclareHCPAction": 2
+    },
+    "UC22E1.txt": {
+        "AddHCPAction": 2,
+        "AddPHAAction": 2,
+        "EditHealthHistoryAction": 2
+    },
+    "UC22E2.txt": {
+        "EmailUtil": 1,
+        "AddERespAction": 1,
+        "AddHCPAction": 1
+    },
+    "UC22S1.txt": {
+        "EditApptTypeAction": 6,
+        "ApptBean": 6,
+        "AddApptAction": 5
+    },
+    "UC22S2.txt": {
+        "AddApptAction": 8,
+        "ApptBean": 7,
+        "GetVisitRemindersAction": 5
+    },
+    "UC22S3.txt": {
+        "ApptBean": 9,
+        "EmergencyReportAction": 7,
+        "PatientDAO": 7
+    },
+    "UC23E1.txt": {
+        "AddRemoteMonitoringDataAction": 2,
+        "GetVisitRemindersAction": 2,
+        "LabProcedureDAO": 2
+    },
+    "UC23E2.txt": {
+        "AddOfficeVisitAction": 2,
+        "AddPatientAction": 2,
+        "ChronicDiseaseRiskAction": 2
+    },
+    "UC23S1.txt": {
+        "PatientBaseAction": 3,
+        "AdverseEventBean": 3,
+        "SurveyBean": 3
+    },
+    "UC23S3.txt": {
+        "EditPHRAction": 8,
+        "MyDiagnosisAction": 8,
+        "EditOfficeVisitAction": 7
+    },
+    "UC23S4.txt": {
+        "UpdateHospitalListAction": 4,
+        "ReportRequestDAO": 4,
+        "GetVisitRemindersAction": 3
+    },
+    "UC24.txt": {
+        "SurveyBean": 7,
+        "SurveyResultBean": 7,
+        "HCPDiagnosisBean": 6
+    },
+    "UC25.txt": {
+        "SurveyResultBean": 17,
+        "SurveyBean": 13,
+        "MyDiagnosisAction": 11
+    },
+    "UC25E1.txt": {
+        "OfficeVisitBaseAction": 4,
+        "ChangeSessionTimeoutAction": 3,
+        "EditOfficeVisitAction": 3
+    },
+    "UC26E1.txt": {
+        "LabProcHCPAction": 4,
+        "EditOfficeVisitAction": 3,
+        "GenerateCalendarAction": 3
+    },
+    "UC26E2.txt": {
+        "HospitalsDAO": 2,
+        "PatientDAO": 2,
+        "ReferralDAO": 2
+    },
+    "UC26S1.txt": {
+        "LabProcedureBean": 7,
+        "EditOfficeVisitAction": 6,
+        "LabProcHCPAction": 6
+    },
+    "UC26S2.txt": {
+        "LabProcHCPAction": 6,
+        "MyDiagnosisAction": 6,
+        "PatientDAO": 6
+    },
+    "UC26S3.txt": {
+        "LabProcHCPAction": 6,
+        "EditOfficeVisitAction": 4,
+        "LabProcUAPAction": 4
+    },
+    "UC26S4.txt": {
+        "LabProcedureBean": 7,
+        "LabProcHCPAction": 6,
+        "LabProcedureDAO": 6
+    },
+    "UC27S1.txt": {
+        "ResetPasswordAction": 6,
+        "AddUAPAction": 5,
+        "PatientBean": 4
+    },
+    "UC27S2.txt": {
+        "LabProcUAPAction": 4,
+        "MyDiagnosisAction": 4,
+        "UpdateHospitalListAction": 4
+    },
+    "UC28.txt": {
+        "AddOfficeVisitAction": 7,
+        "OfficeVisitDAO": 6,
+        "PatientDAO": 6
+    },
+    "UC29.txt": {
+        "MyDiagnosisAction": 16,
+        "HCPDiagnosisBean": 13,
+        "OfficeVisitBean": 11
+    },
+    "UC2E2.txt": {
+        "AddApptAction": 2,
+        "AddRemoteMonitoringDataAction": 2,
+        "ChronicDiseaseRiskAction": 2
+    },
+    "UC2S1.txt": {
+        "EditOfficeVisitAction": 12,
+        "ManageHospitalAssignmentsAction": 11,
+        "PersonnelDAO": 11
+    },
+    "UC2S2.txt": {
+        "AddUAPAction": 5,
+        "EditOfficeVisitAction": 4,
+        "SendMessageAction": 4
+    },
+    "UC30E1.txt": {
+        "AdverseEventBean": 3,
+        "EditApptTypeAction": 2,
+        "GetVisitRemindersAction": 2
+    },
+    "UC30E2.txt": {
+        "MyDiagnosisAction": 3,
+        "SendMessageAction": 3,
+        "PatientDAO": 3
+    },
+    "UC30S1.txt": {
+        "MessageBean": 7,
+        "EditPatientAction": 6,
+        "EmergencyReportAction": 6
+    },
+    "UC30S2.txt": {
+        "Email": 6,
+        "MessageBean": 6,
+        "EmergencyReportAction": 5
+    },
+    "UC30S3.txt": {
+        "SendMessageAction": 6,
+        "EmergencyReportAction": 5,
+        "MonitorAdverseEventAction": 5
+    },
+    "UC30S4.txt": {
+        "SendMessageAction": 5,
+        "Email": 5,
+        "EmergencyReportAction": 4
+    },
+    "UC30S5.txt": {
+        "MessageBean": 8,
+        "SendMessageAction": 7,
+        "MessageBeanLoader": 7
+    },
+    "UC30S6.txt": {
+        "MessageDAO": 10,
+        "SendMessageAction": 6,
+        "MessageBean": 6
+    },
+    "UC30S7.txt": {
+        "ChangeSessionTimeoutAction": 9,
+        "ApptBean": 9,
+        "LabProcedureValidator": 9
+    },
+    "UC31S1.txt": {
+        "PrescriptionBean": 9,
+        "MonitorAdverseEventAction": 8,
+        "PatientDAO": 8
+    },
+    "UC31S2.txt": {
+        "GetVisitRemindersAction": 5,
+        "PatientDAO": 5,
+        "AddRemoteMonitoringDataAction": 4
+    },
+    "UC32E1.txt": {
+        "SearchUsersAction": 3,
+        "FamilyDAO": 3,
+        "PatientDAO": 3
+    },
+    "UC32S1.txt": {
+        "RiskDAO": 5,
+        "ChronicDiseaseMediator": 5,
+        "ICDCodesDAO": 4
+    },
+    "UC32S2.txt": {
+        "PatientDAO": 11,
+        "SearchUsersAction": 9,
+        "PatientBean": 9
+    },
+    "UC33E1.txt": {
+        "EditMonitoringListAction": 2,
+        "ManageHospitalAssignmentsAction": 2,
+        "SendMessageAction": 2
+    },
+    "UC33E2.txt": {
+        "MyDiagnosisAction": 4,
+        "DeclareHCPAction": 3,
+        "SendMessageAction": 3
+    },
+    "UC33S1.txt": {
+        "SendMessageAction": 11,
+        "EditPHRAction": 9,
+        "MonitorAdverseEventAction": 9
+    },
+    "UC33S2.txt": {
+        "HCPVisitBean": 8,
+        "AddOfficeVisitAction": 7,
+        "ReferralDAO": 7
+    },
+    "UC33S3.txt": {
+        "ReferralDAO": 9,
+        "AddOfficeVisitAction": 6,
+        "EditPHRAction": 6
+    },
+    "UC34E1.txt": {
+        "MyDiagnosisAction": 3,
+        "SendMessageAction": 3,
+        "PatientDAO": 3
+    },
+    "UC34E2.txt": {
+        "AddRemoteMonitoringDataAction": 4,
+        "HealthRecord": 4,
+        "RemoteMonitoringDataBean": 4
+    },
+    "UC34E3.txt": {
+        "EditPHRAction": 2,
+        "PatientBean": 2,
+        "RemoteMonitoringDataBean": 2
+    },
+    "UC34E4.txt": {
+        "EditPHRAction": 3,
+        "PatientBean": 3,
+        "PatientDAO": 3
+    },
+    "UC34S1.txt": {
+        "EditMonitoringListAction": 13,
+        "AddRemoteMonitoringDataAction": 11,
+        "HealthRecord": 9
+    },
+    "UC34S2.txt": {
+        "AddRemoteMonitoringDataAction": 8,
+        "RemoteMonitoringDAO": 8,
+        "HealthRecord": 7
+    },
+    "UC34S3.txt": {
+        "AddRemoteMonitoringDataAction": 10,
+        "RemoteMonitoringDataBean": 10,
+        "HealthRecord": 9
+    },
+    "UC34S4.txt": {
+        "HealthRecord": 9,
+        "PatientBean": 8,
+        "RemoteMonitoringDataBean": 7
+    },
+    "UC34S5.txt": {
+        "RemoteMonitoringDAO": 13,
+        "AddRemoteMonitoringDataAction": 10,
+        "FamilyDAO": 10
+    },
+    "UC34S6.txt": {
+        "RemoteMonitoringDAO": 12,
+        "FamilyDAO": 10,
+        "PatientDAO": 10
+    },
+    "UC35S1.txt": {
+        "MonitorAdverseEventAction": 7,
+        "PatientDAO": 7,
+        "AdverseEventBean": 6
+    },
+    "UC35S2.txt": {
+        "EmergencyReportAction": 6,
+        "MonitorAdverseEventAction": 6,
+        "AdverseEventBean": 6
+    },
+    "UC36S1.txt": {
+        "MonitorAdverseEventAction": 12,
+        "ReportAdverseEventAction": 7,
+        "GetVisitRemindersAction": 6
+    },
+    "UC36S2.txt": {
+        "MonitorAdverseEventAction": 12,
+        "ReportAdverseEventAction": 7,
+        "AdverseEventBean": 7
+    },
+    "UC36S3.txt": {
+        "MonitorAdverseEventAction": 4,
+        "AdverseEventBean": 4,
+        "ReportAdverseEventAction": 3
+    },
+    "UC37S1.txt": {
+        "ChronicDiseaseRiskAction": 2,
+        "EditMonitoringListAction": 2,
+        "EditOfficeVisitAction": 2
+    },
+    "UC37S2.txt": {
+        "DrugInteractionAction": 4,
+        "DrugInteractionDAO": 4,
+        "DeclareHCPAction": 3
+    },
+    "UC37S3.txt": {
+        "EditOfficeVisitAction": 5,
+        "EmergencyReportAction": 4,
+        "SendMessageAction": 3
+    },
+    "UC38S1.txt": {
+        "DrugInteractionAction": 6,
+        "DrugInteractionBean": 5,
+        "DrugInteractionDAO": 5
+    },
+    "UC38S2.txt": {
+        "DrugInteractionBean": 7,
+        "DrugInteractionAction": 6,
+        "DrugInteractionDAO": 5
+    },
+    "UC3E1.txt": {
+        "LoginFailureAction": 8,
+        "ResetPasswordAction": 5,
+        "AuthDAO": 4
+    },
+    "UC3E2.txt": {
+        "AddPatientAction": 5,
+        "AuthDAO": 5,
+        "ResetPasswordAction": 4
+    },
+    "UC3S1.txt": {
+        "SecurityQAValidator": 4,
+        "SecurityQA": 3,
+        "AuthDAO": 3
+    },
+    "UC3S2.txt": {
+        "ResetPasswordAction": 6,
+        "AuthDAO": 5,
+        "SecurityQA": 4
+    },
+    "UC3S3.txt": {
+        "SessionTimeoutListener": 4,
+        "Email": 3,
+        "SurveyBean": 3
+    },
+    "UC3S4.txt": {
+        "LabProcedureBean": 5,
+        "OfficeVisitDAO": 4,
+        "EditOfficeVisitAction": 3
+    },
+    "UC3S5.txt": {
+        "AddApptAction": 2,
+        "EmailUtil": 1,
+        "AddOfficeVisitAction": 1
+    },
+    "UC40S1.txt": {
+        "GenerateCalendarAction": 5,
+        "AddApptAction": 3,
+        "ChangeSessionTimeoutAction": 3
+    },
+    "UC40S2.txt": {
+        "OfficeVisitDAO": 11,
+        "EditOfficeVisitAction": 10,
+        "GenerateCalendarAction": 10
+    },
+    "UC40S3.txt": {
+        "ApptBean": 6,
+        "AddApptAction": 4,
+        "EditApptTypeAction": 4
+    },
+    "UC40S4.txt": {
+        "AddApptAction": 7,
+        "ApptBean": 7,
+        "AdverseEventDAO": 5
+    },
+    "UC40S5.txt": {
+        "EditOfficeVisitAction": 10,
+        "HCPDiagnosisBean": 9,
+        "GenerateCalendarAction": 8
+    },
+    "UC40S6.txt": {
+        "PrescriptionBean": 7,
+        "AdverseEventDAO": 7,
+        "EditOfficeVisitValidator": 6
+    },
+    "UC40S7.txt": {
+        "LabProcedureBean": 8,
+        "MyDiagnosisAction": 6,
+        "AddApptAction": 5
+    },
+    "UC4E1.txt": {
+        "EditOfficeVisitValidator": 6,
+        "MyDiagnosisAction": 5,
+        "EditOfficeVisitAction": 4
+    },
+    "UC4E2.txt": {
+        "HealthRecordForm": 3,
+        "iTrustException": 3,
+        "Localization": 2
+    },
+    "UC4S1.txt": {
+        "PatientBean": 7,
+        "ResetPasswordAction": 5,
+        "HealthRecord": 5
+    },
+    "UC4S2.txt": {
+        "PatientBean": 8,
+        "EditMonitoringListAction": 7,
+        "HealthRecord": 7
+    },
+    "UC4S3.txt": {
+        "AddHCPAction": 3,
+        "EditMonitoringListAction": 3,
+        "EditPersonnelAction": 3
+    },
+    "UC4S4.txt": {
+        "ReportRequestBean": 4,
+        "EditMonitoringListAction": 3,
+        "EditPHRAction": 3
+    },
+    "UC5S1.txt": {
+        "TransactionBean": 3,
+        "EditApptTypeAction": 2,
+        "TransactionDAO": 2
+    },
+    "UC5S2.txt": {
+        "AddApptAction": 6,
+        "MyDiagnosisAction": 6,
+        "TransactionBean": 6
+    },
+    "UC6S1.txt": {
+        "HCPVisitBean": 7,
+        "EditOfficeVisitValidator": 7,
+        "OfficeVisitBean": 6
+    },
+    "UC6S2.txt": {
+        "LabProcedureDAO": 2,
+        "EditOfficeVisitValidator": 2,
+        "AddApptAction": 1
+    },
+    "UC6S3.txt": {
+        "PatientBean": 6,
+        "SurveyResultBean": 6,
+        "FamilyMemberBean": 5
+    },
+    "UC8S1.txt": {
+        "EditOfficeVisitAction": 3,
+        "EditPHRAction": 3,
+        "MyDiagnosisAction": 3
+    },
+    "UC8S2.txt": {
+        "RemoteMonitoringDAO": 6,
+        "OfficeVisitDAO": 5,
+        "PatientDAO": 5
+    },
+    "UC9S1.txt": {
+        "MyDiagnosisAction": 9,
+        "EditHealthHistoryAction": 7,
+        "EditOfficeVisitAction": 7
+    },
+    "UC9S2.txt": {
+        "EditPHRAction": 11,
+        "RiskDAO": 11,
+        "HealthRecord": 9
+    }
+}
