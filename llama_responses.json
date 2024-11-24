@@ -1,0 +1,405 @@
+{
+    "UC10E1.txt": [],
+    "UC10E2.txt": [
+        "PatientSelection",
+        "HealthcareProfessional",
+        "Confirmation"
+    ],
+    "UC10S1.txt": [
+        "AddRemoteMonitoringDataAction",
+        "HypertensionFactor",
+        "CholesterolFactor",
+        "WeightFactor",
+        "PriorDiagnosisFactor",
+        "AddRemoteMonitoringDataAction"
+    ],
+    "UC10S2.txt": [
+        "AddRemoteMonitoringDataAction",
+        "WeightFactor",
+        "HypertensionFactor",
+        "CholesterolFactor"
+    ],
+    "UC11E1.txt": [
+        "HCP",
+        "MedicalIdentificationNumber",
+        "InputPrompt"
+    ],
+    "UC11E2.txt": [
+        "PatientSelection",
+        "HealthCarePersonnel",
+        "ConfirmationPrompt"
+    ],
+    "UC11S1.txt": [],
+    "UC11S2.txt": [],
+    "UC12.txt": [
+        "AddRemoteMonitoringDataAction",
+        "AgeFactor",
+        "EthnicityFactor",
+        "HypertensionFactor",
+        "CholesterolFactor",
+        "WeightFactor",
+        "PriorDiagnosisFactor"
+    ],
+    "UC13.txt": [
+        "EditRepresentativesAction",
+        "AddPatientValidator",
+        "MailValidator"
+    ],
+    "UC13E1.txt": [],
+    "UC15E1.txt": [
+        "FormValidationException",
+        "EMailValidator"
+    ],
+    "UC15S1.txt": [],
+    "UC15S2.txt": [],
+    "UC15S3.txt": [],
+    "UC15S4.txt": [
+        "UpdateLOINCListAction",
+        "LOINCDAO",
+        "DiagnosisBeanValidator"
+    ],
+    "UC16.txt": [],
+    "UC16E1.txt": [
+        "LHCP",
+        "Patient"
+    ],
+    "UC17S1.txt": [
+        "PriorDiagnosisFactor",
+        "AddRemoteMonitoringDataAction",
+        "HypertensionFactor",
+        "CholesterolFactor"
+    ],
+    "UC17S2.txt": [],
+    "UC17S3.txt": [],
+    "UC18E1.txt": [],
+    "UC18E2.txt": [],
+    "UC18S1.txt": [
+        "AddPatientValidator",
+        "HypertensionFactor",
+        "WeightFactor"
+    ],
+    "UC18S2.txt": [
+        "AddPHAAction",
+        "EditMonitoringListAction"
+    ],
+    "UC19E1.txt": [],
+    "UC19E2.txt": [],
+    "UC19S1.txt": [],
+    "UC19S2.txt": [],
+    "UC19S3.txt": [
+        "HealthRecord",
+        "Prescription"
+    ],
+    "UC1E1.txt": [
+        "SurveySearchValidator",
+        "HypertensionFactor",
+        "EthnicityFactor"
+    ],
+    "UC1E2.txt": [
+        "ErrorList",
+        "AddPatientValidator",
+        "GenderFactor"
+    ],
+    "UC1S1.txt": [],
+    "UC1S2.txt": [
+        "PriorDiagnosisFactor",
+        "HypertensionFactor",
+        "GenderFactor",
+        "AgeFactor"
+    ],
+    "UC21E1.txt": [],
+    "UC21E2.txt": [
+        "PatientManager",
+        "LHCPConfirm"
+    ],
+    "UC21S1.txt": [],
+    "UC22E1.txt": [
+        "UserInputHandler",
+        "Formatter",
+        "ErrorPrompter"
+    ],
+    "UC22E2.txt": [],
+    "UC22S1.txt": [],
+    "UC22S2.txt": [
+        "UpdateLOINCListAction",
+        "PriorDiagnosisFactor",
+        "RiskDAO",
+        "ReportRequestDAO"
+    ],
+    "UC22S3.txt": [],
+    "UC23E1.txt": [],
+    "UC23E2.txt": [],
+    "UC23S1.txt": [
+        "HypertensionFactor"
+    ],
+    "UC23S3.txt": [
+        "PatientDAO",
+        "AddRemoteMonitoringDataAction",
+        "PriorDiagnosisFactor",
+        "HealthRecord"
+    ],
+    "UC23S4.txt": [],
+    "UC24.txt": [],
+    "UC25.txt": [
+        "SurveySearchValidator",
+        "RemoteMonitoringDAO",
+        "AddRemoteMonitoringDataAction"
+    ],
+    "UC25E1.txt": [
+        "SurveySearchValidator",
+        "Relevance: 0.7288033575522406"
+    ],
+    "UC26E1.txt": [
+        "MessageBean",
+        "HCP"
+    ],
+    "UC26E2.txt": [
+        "LabTechnician",
+        "HealthcareProvider"
+    ],
+    "UC26S1.txt": [],
+    "UC26S2.txt": [],
+    "UC26S3.txt": [],
+    "UC26S4.txt": [],
+    "UC27S1.txt": [],
+    "UC27S2.txt": [],
+    "UC28.txt": [],
+    "UC29.txt": [
+        "PriorDiagnosisFactor",
+        "RiskDAO",
+        "RemoteMonitoringDAO",
+        "AddRemoteMonitoringDataAction"
+    ],
+    "UC2E2.txt": [],
+    "UC2S1.txt": [
+        "PersonnelDAO",
+        "RemoteMonitoringDAO",
+        "RiskDAO",
+        "CholesterolFactor",
+        "HypertensionFactor"
+    ],
+    "UC2S2.txt": [
+        "UpdateLOINCListAction",
+        "AddPatientValidator"
+    ],
+    "UC30E1.txt": [
+        "MedicalIdentificationNumberValidator",
+        "ErrorPrompt"
+    ],
+    "UC30E2.txt": [
+        "PatientSelection",
+        "HCPConfirm",
+        "TryAgainPrompt"
+    ],
+    "UC30S1.txt": [
+        "AddRemoteMonitoringDataAction",
+        "EditRepresentativesAction",
+        "EditRepresentativesAction"
+    ],
+    "UC30S2.txt": [],
+    "UC30S3.txt": [
+        "AddRemoteMonitoringDataAction",
+        "EditRepresentativesAction",
+        "SetSecurityQuestionAction",
+        "AuthDAO"
+    ],
+    "UC30S4.txt": [],
+    "UC30S5.txt": [],
+    "UC30S6.txt": [],
+    "UC30S7.txt": [
+        "MessageDAO",
+        "SetSecurityQuestionAction",
+        "PatientRiskFactor",
+        "AddRemoteMonitoringDataAction"
+    ],
+    "UC31S1.txt": [
+        "HypertensionFactor",
+        "CholesterolFactor",
+        "AgeFactor",
+        "AddRemoteMonitoringDataAction",
+        "PriorDiagnosisFactor"
+    ],
+    "UC31S2.txt": [],
+    "UC32E1.txt": [
+        "Patient",
+        "Condition"
+    ],
+    "UC32S1.txt": [],
+    "UC32S2.txt": [],
+    "UC33E1.txt": [],
+    "UC33E2.txt": [],
+    "UC33S1.txt": [
+        "ReferralManagementAction",
+        "ReferralDAO"
+    ],
+    "UC33S2.txt": [],
+    "UC33S3.txt": [],
+    "UC34E1.txt": [],
+    "UC34E2.txt": [
+        "BloodPressure",
+        "ErrorNotification",
+        "BloodPressureInputProcessor"
+    ],
+    "UC34E3.txt": [],
+    "UC34E4.txt": [
+        "HealthRecord",
+        "HypertensionFactor"
+    ],
+    "UC34S1.txt": [
+        "AddRemoteMonitoringDataAction",
+        "EditMonitoringListAction"
+    ],
+    "UC34S2.txt": [
+        "AddRemoteMonitoringDataAction",
+        "WeightFactor",
+        "HypertensionFactor"
+    ],
+    "UC34S3.txt": [
+        "AddRemoteMonitoringDataAction",
+        "HypertensionFactor",
+        "CholesterolFactor",
+        "WeightFactor",
+        "RiskDAO"
+    ],
+    "UC34S4.txt": [
+        "HypertensionFactor",
+        "AddRemoteMonitoringDataAction",
+        "WeightFactor"
+    ],
+    "UC34S5.txt": [
+        "AddRemoteMonitoringDataAction",
+        "HypertensionFactor",
+        "CholesterolFactor",
+        "AgeFactor"
+    ],
+    "UC34S6.txt": [
+        "AddRemoteMonitoringDataAction",
+        "HypertensionFactor",
+        "AgeFactor",
+        "WeightFactor"
+    ],
+    "UC35S1.txt": [
+        "CholesterolFactor",
+        "AgeFactor",
+        "GenderFactor",
+        "PriorDiagnosisFactor",
+        "EthnicityFactor",
+        "WeightFactor",
+        "Type2DiabetesRisks"
+    ],
+    "UC35S2.txt": [
+        "PriorDiagnosisFactor",
+        "CholesterolFactor",
+        "EthnicityFactor",
+        "WeightFactor",
+        "AddRemoteMonitoringDataAction"
+    ],
+    "UC36S1.txt": [],
+    "UC36S2.txt": [
+        "PriorDiagnosisFactor",
+        "AgeFactor",
+        "AddRemoteMonitoringDataAction",
+        "PatientRiskFactor"
+    ],
+    "UC36S3.txt": [
+        "PriorDiagnosisFactor",
+        "CholesterolFactor"
+    ],
+    "UC37S1.txt": [],
+    "UC37S2.txt": [],
+    "UC37S3.txt": [
+        "OverridingReason",
+        "MedicationPrescription",
+        "NotifyPatient"
+    ],
+    "UC38S1.txt": [],
+    "UC38S2.txt": [],
+    "UC3E1.txt": [
+        "SessionTimeoutListener",
+        "LoginFailureAction"
+    ],
+    "UC3E2.txt": [
+        "PatientProfile",
+        "AccountCreation"
+    ],
+    "UC3S1.txt": [],
+    "UC3S2.txt": [],
+    "UC3S3.txt": [
+        "SessionManager",
+        "Timer",
+        "AuthManager"
+    ],
+    "UC3S4.txt": [
+        "HypertensionFactor",
+        "CholesterolFactor",
+        "AgeFactor",
+        "PriorDiagnosisFactor",
+        "WeightFactor"
+    ],
+    "UC3S5.txt": [],
+    "UC40S1.txt": [
+        "AddRemoteMonitoringDataAction",
+        "AgeFactor",
+        "CholesterolFactor",
+        "HypertensionFactor",
+        "WeightFactor"
+    ],
+    "UC40S2.txt": [
+        "PatientVisitBean",
+        "HypertensionFactor",
+        "CholesterolFactor",
+        "RemoteMonitoringDAO",
+        "HealthRecord"
+    ],
+    "UC40S3.txt": [],
+    "UC40S4.txt": [
+        "AddPatientValidator",
+        "HypertensionFactor",
+        "WeightFactor"
+    ],
+    "UC40S5.txt": [],
+    "UC40S6.txt": [
+        "MedicationBean",
+        "CholesterolFactor",
+        "AgeFactor",
+        "GenderFactor"
+    ],
+    "UC40S7.txt": [
+        "HealthRecordFormValidator",
+        "UpdateLOINCListAction",
+        "HypertensionFactor"
+    ],
+    "UC4E1.txt": [],
+    "UC4E2.txt": [],
+    "UC4S1.txt": [
+        "AddPatientValidator",
+        "SecurityQAValidator",
+        "AddRemoteMonitoringDataAction"
+    ],
+    "UC4S2.txt": [],
+    "UC4S3.txt": [
+        "HealthCareProvider",
+        "DemographicInformation",
+        "DataFormat"
+    ],
+    "UC4S4.txt": [],
+    "UC5S1.txt": [
+        "SessionTimeoutListener",
+        "Localization"
+    ],
+    "UC5S2.txt": [
+        "ActionLogger",
+        "TransactionManager",
+        "User"
+    ],
+    "UC6S1.txt": [],
+    "UC6S2.txt": [
+        "GenderFactor",
+        "PriorDiagnosisFactor"
+    ],
+    "UC6S3.txt": [],
+    "UC8S1.txt": [],
+    "UC8S2.txt": [],
+    "UC9S1.txt": [],
+    "UC9S2.txt": []
+}
